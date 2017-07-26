@@ -1,11 +1,11 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 10.12.2016
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.form')
+  angular.module('SimoreFrontend.pages.form')
       .controller('SwitchDemoPanelCtrl', SwitchDemoPanelCtrl);
 
   /** @ngInject */

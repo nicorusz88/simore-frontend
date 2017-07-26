@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 12/16/15
  */
 (function () {
     'use strict';
 
-    angular.module('BlurAdmin.pages.charts.chartJs', [])
+    angular.module('SimoreFrontend.pages.charts.chartJs', [])
         .config(routeConfig).config(chartJsConfig);
 
     /** @ngInject */

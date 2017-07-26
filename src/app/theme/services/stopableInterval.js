@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 12/21/15
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('SimoreFrontend.theme')
     .service('stopableInterval', stopableInterval);
 
   /** @ngInject */

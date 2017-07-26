@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 12/24/15
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.components.mail')
+  angular.module('SimoreFrontend.pages.components.mail')
     .service('composeModal', composeModal);
 
   /** @ngInject */

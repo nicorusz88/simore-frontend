@@ -1,5 +1,5 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 15.12.2015
  */
 (function () {
@@ -7,7 +7,7 @@
 
   var IMAGES_ROOT = 'assets/img/';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('SimoreFrontend.theme')
     .constant('layoutSizes', {
       resWidthCollapseSidebar: 1200,
       resWidthHideSidebar: 500

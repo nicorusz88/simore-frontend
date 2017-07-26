@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.form')
+  angular.module('SimoreFrontend.pages.form')
       .directive('tagInput', tagInput);
 
   /** @ngInject */

@@ -519,6 +519,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/auth.html",
+			"settings":
+			{
+				"buffer_size": 2574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/pages/charts/morris/morrisCtrl.js",
+			"settings":
+			{
+				"buffer_size": 1526,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -694,148 +710,155 @@
 	},
 	"expanded_folders":
 	[
-		"/home/maxi/projects/magf/simore/simore-frontend"
+		"/home/maxi/projects/magf/simore/simore-frontend",
+		"/home/maxi/projects/magf/simore/simore-frontend/src",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts"
 	],
 	"file_history":
 	[
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/promotion.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/agent.rb",
-		"/home/maxi/projects/winks/WinksPMS/lib/tasks/winkshotel.rake",
-		"/home/maxi/projects/winks/WinksPMS/db/schema.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/database.yml",
-		"/home/maxi/projects/winks/WinksPMS/app/models/dispatch_item.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/yield_planet.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/rate.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/rate_plans_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/base.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/rate_plan.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/locales/es.yml",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_agent_match_detail.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/my_allocator.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_agent_match.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/parity_rate_bi.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/room_cloud.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/site_minder.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/channel_managers_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20170509094302_split_description_for_category_matches.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/environments/development.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_room_category_match.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085911_change_channel_manager_room_category_matches.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085913_create_channel_manager_agent_match_details.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20170610132702_split_description_for_category_matches.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/locales/en.yml",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/dispatch_items_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/channel_manager_reservation_logs_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/dispatch_items/_list.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/dispatch_items/_empty_list_item.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/booking.rb",
-		"/home/maxi/projects/winks/WinksPMS/script/parity_rate_robot.rb",
-		"/home/maxi/projects/winks/WinksPMS/vendor/assets/javascripts/dashboard/vendors/bower_components/bootstrap/less/wells.less",
-		"/home/maxi/projects/winks/WinksPMS/app/models/room_category.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_reservation_detail.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20170526165700_adapt_permissions_for_rates_actions.rb",
-		"/home/maxi/projects/winks/WinksPMS/script/delayed_jobs_watchdog_neymar.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/dispatch_items/_item.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/rates_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/channel_managers/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/dispatch.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/accommodation_daily_availability.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085906_index_for_maintenances_for_occupancy_report.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_reservation_detail_booking.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085910_add_rate_plan_to_channel_manager_reservation_detail.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_reservation.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/rates/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/promotions_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/widget_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/widget/_ticket.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/promotion_availability.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/free_nights.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/rates/index.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/accommodation.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/products_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/parity_rate_bis_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085909_add_rate_plan_to_channel_manager_agent_match.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/parity_rate_bis/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/form.js",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/rates/daily.js",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/disposable.js",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20170511101909_final_adapts_for_rates.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/room_categories_selling_limit.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/room_categories_minimum_stay.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085907_add_rate_plan_to_channel_manager_room_category_match.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/parity_rates_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/widget/_rooms_list.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/booking_engine_controller.rb",
-		"/home/maxi/projects/winks/winkspms_production.sql",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/suppliers_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/stocks_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/stock.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/entry.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/operation.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/operation_products_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/agents_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/product.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/supplier.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/product_group.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20170509094300_code_for_room_categories.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/locales/it.yml",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/product_groups_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/maintenances_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/flows_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/booking_exchange.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/flow.rb",
-		"/home/maxi/projects/winks/WinksPMS/Gemfile",
-		"/home/maxi/projects/winks/WinksPMS/app/models/currency.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/routes.rb",
-		"/home/maxi/projects/winks/WinksPMS/config/initializers/apipie.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/channel_manager_reservation_log.rb",
-		"/home/maxi/projects/winks/WinksPMS/lib/errors/utility.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180417085907_flows_web_billing_permissions.rb",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20160128182914_add_channel_manager_actions.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/bookings_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/services/my_allocator_client.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/charges_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/charge.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/currency_exchange.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/booking_reports/index.js",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/accommodations/configuration.js",
-		"/home/maxi/projects/winks/WinksPMS/app/views/flows/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/flows/_item.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/site_minders/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/my_allocators/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/yield_planets/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/room_clouds/_fields.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/models/payment.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/channel_managers/pick.js",
-		"/home/maxi/projects/winks/WinksPMS/app/models/payment_method.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/payment_methods_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/payments_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/controllers/accommodations_controller.rb",
-		"/home/maxi/projects/winks/WinksPMS/app/helpers/currencies_helper.rb",
-		"/home/maxi/projects/winks/winkspms_production-2017-03-31_0717.sql",
-		"/home/maxi/projects/winks/WinksPMS/app/models/dispatch_result.rb",
-		"/home/maxi/projects/winks/WinksPMS/script/double_check_high_demanded_availability_days.rb",
-		"/home/maxi/projects/winks/WinksPMS/backup_winks_factura_electronica.sh",
-		"/home/maxi/projects/winks/WinksPMS/db/migrate/20180308115900_add_tax_field_for_reports.rb",
-		"/home/maxi/Downloads/FacturadorFiscal.log",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/products/index.js",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/products/fields.js",
-		"/home/maxi/projects/winks/WinksPMS/app/views/products/_list.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/products/index.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/assets/javascripts/winks/flows/index.js",
-		"/home/maxi/projects/winks/WinksPMS/app/views/flows/_list.html.erb",
-		"/home/maxi/projects/winks/WinksPMS/app/views/charges/_fields.html.erb"
+		"/home/maxi/projects/magf/simore/simore-frontend/src/index.html",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/pageTop/pageTop.html",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboard.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardCalendar/DashboardCalendarCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardCalendar/dashboardCalendar.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardLineChart/DashboardLineChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardLineChart/dashboardLineChart.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardMap/DashboardMapCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardMap/dashboardMap.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardPieChart/DashboardPieChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardPieChart/dashboardPieChart.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardTodo/DashboardTodoCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/dashboardTodo/dashboardTodo.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/pieCharts/dashboardPieChart.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/popularApp/popularApp.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/trafficChart/TrafficChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/trafficChart/trafficChart.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/weather/WeatherCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/weather/weather.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/form.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/datePickers/datepickerCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/datePickers/datepickerpopupCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/oldSelect/OldSelectpickerPanelCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/oldSelect/selectpicker.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/oldSwitches/OldSwitchPanelCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/oldSwitches/switch.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/select/GroupSelectpickerOptions.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/select/SelectpickerPanelCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/switches/SwitchDemoPanelCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/inputs/widgets/tagsInput/tagsInput.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/form/wizard/wizrdCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/maps/google-maps/GmapPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/maps/leaflet/LeafletPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/maps/map-bubbles/MapBubblePageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/maps/map-lines/MapLinesPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/maps/maps.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/pages.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/profile/ProfileModalCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/profile/ProfilePageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/profile/profile.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/tables/TablesPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/alerts/alerts.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/buttons/ButtonPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/buttons/buttons.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/grid/grid.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/icons/IconsPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/icons/icons.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/modals/ModalsPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/modals/modals.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/modals/notifications/NotificationsCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/tables/tables.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/notifications/NotificationsPageCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/notifications/notifications.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/panels/panels.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/progressBars/progressBars.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/slider/slider.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/tabs/tabs.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/typography/typography.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/ui.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/ui/modals/progressModal/ProgressModalCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/app.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/amCharts.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/areaChart/AreaChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/barChart/BarChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/combinedChart/combinedChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/funnelChart/FunnelChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/ganttChart/ganttChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/lineChart/LineChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/amCharts/pieChart/PieChartCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/chartJs/chartJs.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/chartJs/chartJs1DCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/chartJs/chartJs2DCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/chartJs/chartJsWaveCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/chartist/chartist.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/chartist/chartistCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/charts.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/morris/morris.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/charts/morris/morrisCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/components.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/MailTabCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/composeBox/composeBoxCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/composeBox/composeModal.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/detail/MailDetailCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/list/MailListCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/mail.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/mail/mailMessages.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/timeline/TimelineCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/timeline/timeline.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/tree/tree.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/components/tree/treeCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/blurFeed/BlurFeedCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/blurFeed/blurFeed.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/pages/dashboard/calendar/dashboardCalendar.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baPanel/baPanel.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baPanel/baPanel.service.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baPanel/baPanelBlur.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baPanel/baPanelBlurHelper.service.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baPanel/baPanelSelf.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baSidebar/BaSidebarCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baSidebar/baSidebar.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baSidebar/baSidebar.service.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baSidebar/baSidebarHelpers.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baWizard/baWizard.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baWizard/baWizardCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/baWizard/baWizardStep.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/backTop/backTop.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/components.module.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/contentTop/contentTop.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/msgCenter/MsgCenterCtrl.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/msgCenter/msgCenter.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/pageTop/pageTop.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/progressBarRound/progressBarRound.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/toastrLibConfig.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/components/widgets/widgets.directive.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/animatedChange.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/autoExpand.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/autoFocus.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/includeWithScope.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/ionSlider.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/ngFileSelect.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/scrollPosition.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/trackWidth.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/directives/zoomIn.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/filters/image/appImage.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/filters/image/kameleonImg.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/filters/image/profilePicture.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/filters/text/removeHtml.js",
+		"/home/maxi/projects/magf/simore/simore-frontend/src/app/theme/inputs/baSwitcher/baSwitcher.js"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
 		"height": 158.0,
 		"where_history":
 		[
+			"/home/maxi/projects/winks/WinksPMS/app,/home/maxi/projects/magf/simore/simore-frontend/src/app",
+			"/home/maxi/projects/winks/WinksPMS/app,/home/maxi/projects/magf/simore/simore-frontend/src",
+			"/home/maxi/projects/winks/WinksPMS/app,/home/maxi/projects/magf/simore/simore-frontend/src/app",
 			"/home/maxi/projects/winks/WinksPMS/app",
 			"/home/maxi/projects/winks/WinksPMS",
 			"/home/maxi/projects/winks/WinksPMS/app",
@@ -856,6 +879,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"urlRouterProvider",
+			"BlurAdmin",
 			" DispatchItem.schedule",
 			"propagate_rate_through_channel_manager",
 			"dispatch_items",
@@ -981,9 +1006,7 @@
 			"flows",
 			"iso",
 			"pluck",
-			"default_cu",
-			"#",
-			"Match"
+			"default_cu"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -991,6 +1014,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"SimoreFrontend",
 			"",
 			"\"",
 			"",
@@ -1095,8 +1119,71 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/auth.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 418.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/pages/charts/morris/morrisCtrl.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1156,6 +1243,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"auth",
+				"src/auth.html"
+			],
 			[
 				"cmana",
 				"app/models/channel_manager.rb"
@@ -1663,10 +1754,6 @@
 			[
 				"operaprocon",
 				"app/controllers/operation_products_controller.rb"
-			],
-			[
-				"oper",
-				"app/models/operation.rb"
 			]
 		],
 		"width": 0.0
@@ -1674,9 +1761,21 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "wink",
 		"selected_items":
 		[
+			[
+				"wink",
+				"~/projects/winks/WinksPMS/winkspms.sublime-project"
+			],
+			[
+				"timea",
+				"~/projects/magf/timeamp/timeamp-frontend/timeamp-frontend.sublime-project"
+			],
+			[
+				"simpl",
+				"~/projects/magf/simpleaccount/simpleaccount.sublime-project"
+			],
 			[
 				"",
 				"~/projects/winks/WinksFacturaElectronica/winks_factura_electronica.sublime-project"
@@ -1686,20 +1785,12 @@
 				"~/projects/winks/WinksPMS/winkspms.sublime-project"
 			],
 			[
-				"wink",
-				"~/projects/winks/WinksFacturaElectronica/winks_factura_electronica.sublime-project"
-			],
-			[
 				"simple",
 				"~/projects/magf/simpleaccount/simpleaccount.sublime-project"
 			],
 			[
 				"wn",
 				"~/projects/winks/WinksPMS/winkspms.sublime-project"
-			],
-			[
-				"simpl",
-				"~/projects/magf/simpleaccount/simpleaccount.sublime-project"
 			],
 			[
 				"bra",
@@ -1723,10 +1814,6 @@
 			],
 			[
 				"timeamp",
-				"~/projects/magf/timeamp/timeamp-api/timeamp-api.sublime-project"
-			],
-			[
-				"timea",
 				"~/projects/magf/timeamp/timeamp-api/timeamp-api.sublime-project"
 			],
 			[

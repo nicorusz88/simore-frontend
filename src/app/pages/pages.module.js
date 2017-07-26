@@ -1,21 +1,21 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 16.12.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages', [
+  angular.module('SimoreFrontend.pages', [
     'ui.router',
 
-    'BlurAdmin.pages.dashboard',
-    'BlurAdmin.pages.ui',
-    'BlurAdmin.pages.components',
-    'BlurAdmin.pages.form',
-    'BlurAdmin.pages.tables',
-    'BlurAdmin.pages.charts',
-    'BlurAdmin.pages.maps',
-    'BlurAdmin.pages.profile',
+    'SimoreFrontend.pages.dashboard',
+    'SimoreFrontend.pages.ui',
+    'SimoreFrontend.pages.components',
+    'SimoreFrontend.pages.form',
+    'SimoreFrontend.pages.tables',
+    'SimoreFrontend.pages.charts',
+    'SimoreFrontend.pages.maps',
+    'SimoreFrontend.pages.profile',
   ])
       .config(routeConfig);
 

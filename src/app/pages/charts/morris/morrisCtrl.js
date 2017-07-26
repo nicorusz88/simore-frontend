@@ -1,11 +1,10 @@
 /**
- * @author a.demeshko
- * created on 12/16/15
+ * @author SimoreTeam
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.charts.morris')
+  angular.module('SimoreFrontend.pages.charts.morris')
     .controller('morrisCtrl', morrisCtrl);
 
   /** @ngInject */
