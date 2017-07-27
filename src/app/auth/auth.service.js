@@ -35,7 +35,7 @@
       if (user != undefined){
         
         vm.user = user;
-        $http.defaults.headers.common[xAuthTokenHeaderName] = vm.user.token;
+        $http.defaults.headers.common['x-auth-token'] = vm.user.token;
         return vm.user;
 
       }else{

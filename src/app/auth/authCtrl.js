@@ -9,7 +9,7 @@
     .controller('authCtrl', authCtrl);
 
   /** @ngInject */
-  function authCtrl($state, $cookies, principal) {
+  function authCtrl($state, $cookies, $http, $rootScope, principal) {
     var vm = this;
 
     vm.login = login;
@@ -17,9 +17,9 @@
     vm.principalResource = principal.getResource();
 
     function login(){
-      vm.principalResource.authenticate(vm.entry, function(){
+      vm.principalResource.authenticate($.param(vm.entry), function(user){
         $rootScope.user = user;
-        $http.defaults.headers.common[ xAuthTokenHeaderName ] = user.token;
+        $http.defaults.headers.common['x-auth-token'] = user.token;
         $cookies.put('user', user);
         $state.go('dashboard');
       });
