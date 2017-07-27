@@ -12,7 +12,10 @@ angular.module('SimoreFrontend', [
   'ui.slimscroll',
   'ngJsTree',
   'angular-progress-button-styles',
+  'ngResource',
+  'ngCookies',
 
+  'SimoreFrontend.auth',
   'SimoreFrontend.theme',
   'SimoreFrontend.pages'
 ]);
