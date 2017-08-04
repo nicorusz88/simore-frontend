@@ -9,7 +9,7 @@
     .service('principal', principal);
 
   /** @ngInject */
-  function principal($resource, $http, $cookies) {
+  function principal($resource, $http, $cookies, config) {
     var vm = this;
     vm.user = null;
 
@@ -19,7 +19,7 @@
     };
 
     function getResource(){
-      return $resource('http://192.168.1.7:8088/:action', {},
+      return $resource(config.apiUrl + ':' + config.apiPort + '/:action', {},
          {
            authenticate: {
              method: 'POST',

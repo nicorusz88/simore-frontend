@@ -53,3 +53,5 @@ build
 /src/release
 /release
 /bower_components
+/src/app/app.constant.js
+*.sublime-workspace

@@ -15,6 +15,7 @@ angular.module('SimoreFrontend', [
   'ngResource',
   'ngCookies',
 
+  'SimoreFrontend.config',
   'SimoreFrontend.auth',
   'SimoreFrontend.theme',
   'SimoreFrontend.pages'

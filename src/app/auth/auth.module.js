@@ -6,7 +6,7 @@
   'use strict';
 
   angular.module('SimoreFrontend.auth', [
-    'ui.router',
+    'ui.router'
   ])
       .config(routeConfig);
 
