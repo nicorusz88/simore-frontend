@@ -11,10 +11,11 @@
   /** @ngInject */
   function UsersIndexCtrl(User) {
     var vm = this;
-    vm.smartTableData = [];
-
-    User.query(function(data) {
-      vm.smartTableData = data;
+    vm.users = [];
+    vm.displayedUsers = [];
+    User.query({cmd: 'roles', roles: 'ADMINISTRATOR,PROFESSIONAL'}, function(data) {
+      vm.users = data;
+      vm.displayedUsers = data;
     });
 
   }

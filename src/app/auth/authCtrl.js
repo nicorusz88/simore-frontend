@@ -20,7 +20,7 @@
       vm.principalResource.authenticate($.param(vm.entry), function(user){
         $rootScope.user = user;
         $http.defaults.headers.common['x-auth-token'] = user.token;
-        $cookies.put('user', user);
+        $cookies.put('user', JSON.stringify(user));
         $state.go('dashboard');
       });
 

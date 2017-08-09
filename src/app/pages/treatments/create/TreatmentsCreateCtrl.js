@@ -5,20 +5,15 @@
 (function () {
   'use strict';
 
-  angular.module('SimoreFrontend.pages.users.update')
-      .controller('UsersUpdateCtrl', UsersUpdateCtrl);
+  angular.module('SimoreFrontend.pages.treatments.create')
+      .controller('TreatmentsCreateCtrl', TreatmentsCreateCtrl);
 
   /** @ngInject */
-  function UsersUpdateCtrl($state, $stateParams, User) {
+  function TreatmentsCreateCtrl($state, User) {
     var vm = this;
-
-    vm.entry = {};
+    vm.entry = new User({});
     vm.error = {};
     vm.save = save;
-
-    User.get( { userId: $stateParams.userId}, function(user) {
-      vm.entry = user;
-    });
 
 
     ////////////////////
@@ -28,7 +23,7 @@
       if (form.$valid) {
         vm.error = {};
 
-        User.update({ userId: $stateParams.userId }, vm.entry, function(){
+        vm.entry.$save({}, function() {
           $state.go('users.index', null, {reload: true});
         });
       }

@@ -33,8 +33,7 @@
     function isLoggedIn(){
       var user = $cookies.get('user');
       if (user != undefined){
-        
-        vm.user = user;
+        vm.user = JSON.parse(user);
         $http.defaults.headers.common['x-auth-token'] = vm.user.token;
         return vm.user;
 

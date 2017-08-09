@@ -10,6 +10,7 @@
 
     'SimoreFrontend.pages.dashboard',
     'SimoreFrontend.pages.users',
+    'SimoreFrontend.pages.treatments',
     //'SimoreFrontend.pages.components',
     //'SimoreFrontend.pages.form',
     //'SimoreFrontend.pages.tables',

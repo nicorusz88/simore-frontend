@@ -1,40 +1,47 @@
 <div class="horizontal-scroll">
-  <table class="table" st-table="vm.smartTableData">
+  <table class="table" st-table="vm.displayedUsers" st-safe-src="vm.users">
     <thead>
-      <tr class="sortable ">
+      <tr class="sortable">
         <th class="table-id" st-sort="id" st-sort-default="true">#</th>
         <th st-sort="firstName">Nombre</th>
         <th st-sort="lastName">Apellido</th>
-        <th st-sort="username">Usuario</th>
+        <th st-sort="userName">Usuario</th>
         <th st-sort="email">Email</th>
+        <th>Roles</th>
         <th></th>
       </tr>
       <tr>
         <th></th>
         <th>
-          <input st-search="firstName" placeholder="Search First Name" class="input-sm form-control search-input" type="search" />
+          <input st-search="firstName" placeholder="Buscar nombre" class="input-sm form-control search-input" type="search" />
         </th>
         <th>
-          <input st-search="lastName" placeholder="Search Last Name" class="input-sm form-control search-input" type="search" />
+          <input st-search="lastName" placeholder="Buscar apellido" class="input-sm form-control search-input" type="search" />
         </th>
         <th>
-          <input st-search="username" placeholder="Search Username" class="input-sm form-control search-input" type="search" />
+          <input st-search="userName" placeholder="Buscar usuario" class="input-sm form-control search-input" type="search" />
         </th>
         <th>
-          <input st-search="email" placeholder="Search Email" class="input-sm form-control search-input" type="search" />
+          <input st-search="email" placeholder="Buscar email" class="input-sm form-control search-input" type="search" />
         </th>
         <th>
-          
+        </th>
+        <th>
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="item in vm.smartTableData">
+      <tr ng-repeat="item in vm.displayedUsers">
         <td class="table-id">{{item.id}}</td>
         <td>{{item.firstName}}</td>
         <td>{{item.lastName}}</td>
-        <td>{{item.username}}</td>
+        <td>{{item.userName}}</td>
         <td><a class="email-link" ng-href="mailto:{{item.email}}">{{item.email}}</a></td>
+        <td>
+          <button ng-repeat="rol in item.roles" class="btn btn-info">
+            {{rol.name}}
+          </button>
+        </td>
         <td>
           <a ui-sref="users.update({userId: item.id})" class="btn btn-primary btn-icon"><i class="ion-edit"></i></a>
           <button class="btn btn-danger btn-icon"><i class="ion-trash-a"></i></button>
@@ -44,7 +51,7 @@
     <tfoot>
       <tr>
         <td colspan="6" class="text-center">
-          <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+          <div st-pagination="" st-items-by-page="20" st-displayed-pages="5"></div>
         </td>
       </tr>
     </tfoot>

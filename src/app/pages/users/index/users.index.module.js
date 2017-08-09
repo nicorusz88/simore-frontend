@@ -20,7 +20,7 @@
           title: 'Listado usuarios',
           sidebarMeta: {
             icon: 'ion-person-stalker',
-            order: 201,
+            order: 210,
           },
         });
   }

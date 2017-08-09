@@ -5,22 +5,22 @@
 (function () {
   'use strict';
 
-  angular.module('SimoreFrontend.pages.users.create', [
+  angular.module('SimoreFrontend.pages.treatments.create', [
   ])
   .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-        .state('users.create', {
+        .state('treatments.create', {
           url: '/create',
-          templateUrl: 'app/pages/users/create/create.html',
-          controller: 'UsersCreateCtrl',
+          templateUrl: 'app/pages/treatments/create/create.html',
+          controller: 'TreatmentsCreateCtrl',
           controllerAs: "vm",
-          title: 'Nuevo usuario',
+          title: 'Nuevo trtamiento',
           sidebarMeta: {
             icon: 'ion-person-add',
-            order: 220,
+            order: 310,
           },
         });
   }
