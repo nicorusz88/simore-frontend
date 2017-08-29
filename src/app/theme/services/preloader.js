@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 3/1/16
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('SimoreFrontend.theme')
     .service('preloader', preloader);
 
   /** @ngInject */

@@ -1,11 +1,11 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 16.12.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.ui.notifications', [])
+  angular.module('SimoreFrontend.pages.ui.notifications', [])
       .config(routeConfig);
 
   /** @ngInject */

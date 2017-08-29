@@ -5,18 +5,18 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.ui', [
-    'BlurAdmin.pages.ui.typography',
-    'BlurAdmin.pages.ui.buttons',
-    'BlurAdmin.pages.ui.icons',
-    'BlurAdmin.pages.ui.modals',
-    'BlurAdmin.pages.ui.grid',
-    'BlurAdmin.pages.ui.alerts',
-    'BlurAdmin.pages.ui.progressBars',
-    'BlurAdmin.pages.ui.notifications',
-    'BlurAdmin.pages.ui.tabs',
-    'BlurAdmin.pages.ui.slider',
-    'BlurAdmin.pages.ui.panels',
+  angular.module('SimoreFrontend.pages.ui', [
+    'SimoreFrontend.pages.ui.typography',
+    'SimoreFrontend.pages.ui.buttons',
+    'SimoreFrontend.pages.ui.icons',
+    'SimoreFrontend.pages.ui.modals',
+    'SimoreFrontend.pages.ui.grid',
+    'SimoreFrontend.pages.ui.alerts',
+    'SimoreFrontend.pages.ui.progressBars',
+    'SimoreFrontend.pages.ui.notifications',
+    'SimoreFrontend.pages.ui.tabs',
+    'SimoreFrontend.pages.ui.slider',
+    'SimoreFrontend.pages.ui.panels',
   ])
       .config(routeConfig);
 

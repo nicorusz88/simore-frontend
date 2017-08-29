@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme.components')
+  angular.module('SimoreFrontend.theme.components')
     .controller('BaSidebarCtrl', BaSidebarCtrl);
 
   /** @ngInject */

@@ -1,11 +1,11 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 21.12.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.ui.tabs', [])
+  angular.module('SimoreFrontend.pages.ui.tabs', [])
       .config(routeConfig);
 
   /** @ngInject */

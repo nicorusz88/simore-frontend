@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 12/22/15
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.ui.slider', [])
+  angular.module('SimoreFrontend.pages.ui.slider', [])
     .config(routeConfig);
 
   /** @ngInject */

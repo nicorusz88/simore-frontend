@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 1/12/16
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.components.timeline', [])
+  angular.module('SimoreFrontend.pages.components.timeline', [])
     .config(routeConfig);
 
   /** @ngInject */

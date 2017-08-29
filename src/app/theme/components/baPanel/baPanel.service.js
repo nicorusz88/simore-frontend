@@ -1,11 +1,11 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 23.12.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('SimoreFrontend.theme')
       .factory('baPanel', baPanel);
 
   /** @ngInject */

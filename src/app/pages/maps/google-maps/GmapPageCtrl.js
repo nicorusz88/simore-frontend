@@ -1,11 +1,11 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 16.12.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.maps')
+  angular.module('SimoreFrontend.pages.maps')
       .controller('GmapPageCtrl', GmapPageCtrl);
 
   /** @ngInject */

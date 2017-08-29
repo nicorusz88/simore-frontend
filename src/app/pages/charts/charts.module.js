@@ -1,15 +1,15 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 16.12.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.charts', [
-      'BlurAdmin.pages.charts.amCharts',
-      'BlurAdmin.pages.charts.chartJs',
-      'BlurAdmin.pages.charts.chartist',
-      'BlurAdmin.pages.charts.morris'
+  angular.module('SimoreFrontend.pages.charts', [
+      'SimoreFrontend.pages.charts.amCharts',
+      'SimoreFrontend.pages.charts.chartJs',
+      'SimoreFrontend.pages.charts.chartist',
+      'SimoreFrontend.pages.charts.morris'
   ])
       .config(routeConfig);
 

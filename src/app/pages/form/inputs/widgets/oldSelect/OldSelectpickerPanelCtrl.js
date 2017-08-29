@@ -1,12 +1,12 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 22.04.2016
  * @deprecated
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.form')
+  angular.module('SimoreFrontend.pages.form')
       .controller('OldSelectpickerPanelCtrl', OldSelectpickerPanelCtrl);
 
   /** @ngInject */

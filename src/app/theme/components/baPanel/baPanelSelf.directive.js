@@ -1,5 +1,5 @@
 /**
- * @author v.lugovsky
+ * @author SimoreTeam
  * created on 23.12.2015
  */
 (function () {
@@ -8,7 +8,7 @@
   /**
    * Represents current element as panel, adding all necessary classes.
    */
-  angular.module('BlurAdmin.theme')
+  angular.module('SimoreFrontend.theme')
       .directive('baPanelSelf', baPanelSelf);
 
   /** @ngInject */

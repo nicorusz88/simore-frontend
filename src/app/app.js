@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('BlurAdmin', [
+angular.module('SimoreFrontend', [
   'ngAnimate',
   'ui.bootstrap',
   'ui.sortable',
@@ -12,7 +12,11 @@ angular.module('BlurAdmin', [
   'ui.slimscroll',
   'ngJsTree',
   'angular-progress-button-styles',
+  'ngResource',
+  'ngCookies',
 
-  'BlurAdmin.theme',
-  'BlurAdmin.pages'
+  'SimoreFrontend.config',
+  'SimoreFrontend.auth',
+  'SimoreFrontend.theme',
+  'SimoreFrontend.pages'
 ]);

@@ -1,11 +1,11 @@
 /**
- * @author a.demeshko
+ * @author SimoreTeam
  * created on 12.21.2015
  */
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.components.tree', [])
+  angular.module('SimoreFrontend.pages.components.tree', [])
     .config(routeConfig)
     .config(function(){
       $.jstree.defaults.core.themes.url = true;
