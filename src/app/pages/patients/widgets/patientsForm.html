@@ -1,0 +1,201 @@
+
+
+<form class="form-horizontal" name="form" role="form" ng-submit="vm.save(form)" novalidate>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="userName">Usuario</label>
+      <div class="col-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon addon-left">@</span>
+          <input type="text" class="form-control" id="userName" name="userName" ng-model="vm.entry.userName" placeholder="Ingrese el nombre de usuario" required="">
+        </div>
+        <div ng-show="form.$submitted || form.userName.$touched" class="errors">
+            <div ng-show="form.userName.$error.required">Debe ingresar el usuario</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-sm-2 control-label">Contraseña</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="password" id="password" ng-model="vm.entry.password" placeholder="Ingrese la contraseña" required="" minlength="8">
+        <div ng-show="form.$submitted || form.password.$touched" class="errors">
+          <div ng-show="form.password.$error.required">Debe ingresar la contraseña</div>
+          <div ng-show="form.password.$error.minlength">La contraseña debe contener al menos 8 caracteres</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirmation" class="col-sm-2 control-label"></label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="passwordConfirmation" name="passwordConfirmation" ng-model="vm.entry.passwordConfirmation" placeholder="Confirme la constraseña" match="form.password" required="" minlength="8">
+        <div ng-show="form.$submitted || form.passwordConfirmation.$touched" class="errors">
+          <div ng-show="form.passwordConfirmation.$error.required">Debe confirmar la contraseña</div>
+          <div ng-show="form.passwordConfirmation.$error.minlength">La contraseña debe contener al menos 8 caracteres</div>
+          <div ng-show="form.passwordConfirmation.$error.match">La contraseñas no coinciden</div>
+        </div>
+      </div>
+    </div>
+     <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email" ng-model="vm.entry.email" placeholder="Ingrese el email" required="">
+        <div ng-show="form.$submitted || form.email.$touched" class="errors">
+          <div ng-show="form.email.$error.required">Debe ingresar un email</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="firstName" class="col-sm-2 control-label">Nombre</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="firstName" name="firstName" ng-model="vm.entry.firstName" placeholder="Ingrese el nombre" required="">
+        <div ng-show="form.$submitted || form.firstName.$touched" class="errors">
+            <div ng-show="form.firstName.$error.required">Debe ingresar el nombre</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastName" class="col-sm-2 control-label">Apellido</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lastName" name="lastName" ng-model="vm.entry.lastName" placeholder="Ingrese el apellido" required="">
+        <div ng-show="form.$submitted || form.lastName.$touched" class="errors">
+          <div ng-show="form.lastName.$error.required">Debe ingresar el apellido</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gender" class="col-sm-2 control-label">Sexo</label>
+      <div class="col-sm-10">
+        <select id="gender" name="gender" ng-model="vm.entry.gender" class="form-control">
+          <option value="F">Femenino</option>
+          <option value="M">Masculino</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="birthDate" class="col-sm-2 control-label">Fecha de nacimiento</label>
+      <div class="col-sm-10">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd" datepicker-options="vm.options" ng-model="vm.dt" is-open="vm.opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="vm.open()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address" class="col-sm-2 control-label">Dirección</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="address" name="address" ng-model="vm.entry.address.street" placeholder="Ingrese la dirección" required="">
+        <div ng-show="form.$submitted || form.address.$touched" class="errors">
+          <div ng-show="form.address.$error.required">Debe ingresar la dirección</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="city" class="col-sm-2 control-label">Ciudad</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="city" name="city" ng-model="vm.entry.address.city" placeholder="Ingrese la ciudad" required="">
+        <div ng-show="form.$submitted || form.city.$touched" class="errors">
+          <div ng-show="form.city.$error.required">Debe ingresar la ciudad</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone" class="col-sm-2 control-label">Teléfono</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="phone" name="phone" ng-model="vm.entry.phone" placeholder="Ingrese el teléfono" required="">
+        <div ng-show="form.$submitted || form.phone.$touched" class="errors">
+          <div ng-show="form.phone.$error.required">Debe ingresar el teléfono</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="zipCode" class="col-sm-2 control-label">CP</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="zipCode" name="zipCode" ng-model="vm.entry.address.zipCode" placeholder="Ingrese el CP" required="">
+        <div ng-show="form.$submitted || form.zipCode.$touched" class="errors">
+          <div ng-show="form.zipCode.$error.required">Debe ingresar el CP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="firstName" class="col-sm-2 control-label">Obra social</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="medicalInsurance" name="medicalInsurance" ng-model="vm.entry.medicalInsurance.name" placeholder="Ingrese la Obra Social" required="">
+        <div ng-show="form.$submitted || form.medicalInsurance.$touched" class="errors">
+          <div ng-show="form.medicalInsurance.$error.required">Debe ingresar la obra socual</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="firstName" class="col-sm-2 control-label">Número</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="number" name="number" ng-model="vm.entry.medicalInsurance.number" placeholder="Ingrese número de socio" required="">
+        <div ng-show="form.$submitted || form.zipCode.$touched" class="errors">
+          <div ng-show="form.zipCode.$error.required">Debe ingresar el número de socio</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="firstName" class="col-sm-2 control-label">Tipo de sangre</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="bloodType" name="bloodType" ng-model="vm.entry.bloodType" placeholder="Ingrese el tipo de sangre" required="">
+        <div ng-show="form.$submitted || form.bloodType.$touched" class="errors">
+          <div ng-show="form.bloodType.$error.required">Debe ingresar el tipo de sangre</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="height" class="col-sm-2 control-label">Altura</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="height" name="height" ng-model="vm.entry.height" placeholder="Ingrese la altura en mts" required="">
+        <div ng-show="form.$submitted || form.height.$touched" class="errors">
+          <div ng-show="form.height.$error.required">Debe ingresar la altura</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="weight" class="col-sm-2 control-label">Peso</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="weight" name="weight" ng-model="vm.entry.weight" placeholder="Ingrese el peso en KG" required="">
+        <div ng-show="form.$submitted || form.weight.$touched" class="errors">
+          <div ng-show="form.weight.$error.required">Debe ingresar el peso</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="allergies" class="col-sm-2 control-label">Alergias</label>
+      <div class="col-sm-10">
+        <textarea cols="10" rows="2" class="form-control" id="allergies" name="allergies" ng-model="vm.entry.allergies" placeholder="Ingrese las alergias"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="treatment" class="col-sm-2 control-label">Tratamiento</label>
+      <div class="col-sm-10">
+        <select ng-model="vm.entry.treatment.treatmentTemplate.id" class="form-control" id="treatment" name="treatment" ng-options="treatmentsTemplates.id as treatmentsTemplates.name for treatmentsTemplates in vm.treatmentsTemplates" required=""></select>
+        <div ng-show="form.$submitted || form.treatment.$touched" class="errors">
+          <div ng-show="form.treatment.$error.required">Debe seleccionar al menos un tratamiento</div>
+        </div>
+      </div>
+    </div>
+     <div class="form-group">
+      <label for="description" class="col-sm-2 control-label">Descripción</label>
+      <div class="col-sm-10">
+        <textarea cols="10" rows="2" class="form-control" id="description" name="description" ng-model="vm.entry.treatment.description" placeholder="Ingrese la Descripción del tratamiento" required=""></textarea>
+        <div ng-show="form.$submitted || form.description.$touched" class="errors">
+          <div ng-show="form.description.$error.required">Debe seleccionar la descripción del tratamiento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <div class="col-sm-offset-5 col-sm-7">
+        <button type="submit" class="btn btn-primary" ng-disabled="!form.$valid">Guardar</button>
+      </div>
+    </div>
+  </div>
+</form>
