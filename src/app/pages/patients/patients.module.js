@@ -10,6 +10,7 @@
     'ngSanitize',
     'SimoreFrontend.pages.patients.create',
     'SimoreFrontend.pages.patients.index',
+    'SimoreFrontend.pages.patients.treatment',
   ])
   .config(routeConfig);
 

@@ -5,11 +5,11 @@
 (function () {
   'use strict';
 
-  angular.module('SimoreFrontend.pages.patients.create')
-      .controller('PatientsCreateCtrl', PatientsCreateCtrl);
+  angular.module('SimoreFrontend.pages.patients.treatment')
+      .controller('PatientsTreatmentCtrl', PatientsTreatmentCtrl);
 
   /** @ngInject */
-  function PatientsCreateCtrl($scope, $state, User, TreatmentTemplate) {
+  function PatientsTreatmentCtrl($scope, $state, User, TreatmentTemplate) {
     var vm = this;
     vm.entry = new User({roles: [{id: 2, name: 'PACIENT'}]});
     
