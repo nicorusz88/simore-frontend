@@ -14,7 +14,7 @@ angular.module('SimoreFrontend', [
   'angular-progress-button-styles',
   'ngResource',
   'ngCookies',
-
+  
   'SimoreFrontend.config',
   'SimoreFrontend.auth',
   'SimoreFrontend.theme',

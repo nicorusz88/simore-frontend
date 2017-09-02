@@ -9,15 +9,22 @@
       .controller('PatientsCreateCtrl', PatientsCreateCtrl);
 
   /** @ngInject */
-  function PatientsCreateCtrl($state, User, TreatmentTemplate) {
+  function PatientsCreateCtrl($scope, $state, User, TreatmentTemplate) {
     var vm = this;
-    vm.entry = new User({roles: [{name: 'PACIENT'}]});
-    vm.error = {};
+    vm.entry = new User({roles: [{id: 2, name: 'PACIENT'}]});
+    
     vm.save = save;
+    vm.arePersonalInfoPasswordsEqual = arePersonalInfoPasswordsEqual;
+
     vm.treatmentsTemplates = [];
+    vm.proffesionals = [];
 
     TreatmentTemplate.query({}, function(data) {
       vm.treatmentsTemplates = data;
+    });
+
+    User.query({cmd: 'roles', roles: 'PROFESSIONAL'}, function(data) {
+      vm.proffesionals = data;
     });
 
     vm.dt = new Date();
@@ -31,10 +38,18 @@
         showWeeks: false
     };
 
+
+    vm.shipment = {};
+
+
     
 
 
     ////////////////////
+
+    function arePersonalInfoPasswordsEqual(){
+      return vm.entry.confirmPassword && vm.entry.password == vm.entry.confirmPassword;
+    }
 
     function open() {
       vm.opened = true;

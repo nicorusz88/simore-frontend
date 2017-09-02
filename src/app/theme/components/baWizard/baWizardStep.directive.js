@@ -23,6 +23,7 @@
           submit: submit,
           isComplete: isComplete,
           isAvailiable: isAvailiable,
+          submitForm: submitForm,
           prevTab: undefined,
           setPrev: setPrev
         };
@@ -39,6 +40,10 @@
 
         function submit() {
           $scope.form && $scope.form.$setSubmitted(true);
+        }
+
+        function submitForm() {
+          $scope.form.submit();
         }
 
         function isComplete() {

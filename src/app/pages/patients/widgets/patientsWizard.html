@@ -1,0 +1,154 @@
+<div class="widgets">
+  <div class="row">
+    <div class="col-md-12">
+      <div ba-panel ba-panel-title="Alta de paciente" ba-panel-class="with-scroll">
+        <ba-wizard>
+          <ba-wizard-step title="Información personal" form="vm.personalInfoForm">
+            <form name="vm.personalInfoForm" novalidate>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group has-feedback" ng-class="{'has-error': vm.personalInfoForm.userName.$invalid && (vm.personalInfoForm.userName.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="userName">Usuario</label>
+                    <div class="input-group">
+                      <span class="input-group-addon addon-left">@</span>
+                      <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" ng-model="vm.entry.userName" required>
+                    </div>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.email.$invalid && (vm.personalInfoForm.email.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese el Email" ng-model="vm.entry.email" required>
+                    <span class="help-block error-block basic-block">Ingrese un email válido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.password.$invalid && (vm.personalInfoForm.password.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="vm.entry.password" required>
+                    <span class="help-block error-block basic-block">Required</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': !vm.arePersonalInfoPasswordsEqual() && (vm.personalInfoForm.confirmPassword.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="confirmPassword">Confirme Contraseña</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirme contraseña" ng-model="vm.entry.confirmPassword" required>
+                    <span class="help-block error-block basic-block">Las contraseñas deben coincidir</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.firstName.$invalid && (vm.personalInfoForm.firstName.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="firstName">Nombre</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ingrese el nombre" ng-model="vm.entry.firstName" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.lastName.$invalid && (vm.personalInfoForm.lastName.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="lastName">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Ingrese el apellido" ng-model="vm.entry.lastName" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.gender.$invalid && (vm.personalInfoForm.gender.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="gender">Sexo</label>
+                    <select id="gender" name="gender" ng-model="vm.personalInfoForm.gender" class="form-control" required="">
+                      <option value="Female">Femenino</option>
+                      <option value="Male">Masculino</option>
+                    </select>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.birthDate.$invalid && (vm.personalInfoForm.birthDate.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="birthDate">Fecha de nacimiento</label>
+                    <p class="input-group">
+                      <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd" datepicker-options="vm.options" ng-model="vm.personalInfoForm.birthDate" is-open="vm.opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.open()">
+                          <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                      </span>
+                    </p>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.address.$invalid && (vm.personalInfoForm.address.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="street">Dirección</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Ingrese la dirección" ng-model="vm.entry.address.street" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.city.$invalid && (vm.personalInfoForm.city.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="city">Ciudad</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Ingrese la ciudad" ng-model="vm.entry.address.city" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.phone.$invalid && (vm.personalInfoForm.phone.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="phone">Teléfono</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Ingrese el teléfono" ng-model="vm.entry.phone" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.zipCode.$invalid && (vm.personalInfoForm.zipCode.$dirty || vm.personalInfoForm.$submitted)}">
+                    <label for="zipCode">CP</label>
+                    <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Ingrese el código postal" ng-model="vm.entry.address.zipCode" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </ba-wizard-step>
+          <ba-wizard-step title="Tratamiento" form="vm.medicalInformationForm">
+            <form name="vm.medicalInformationForm" novalidate ng-submit="vm.save(vm.medicalInformationForm)">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.medicalInsuranceName.$invalid && (vm.medicalInformationForm.medicalInsuranceName.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="medicalInsuranceName">Obra social</label>
+                    <input type="text" class="form-control" id="medicalInsuranceName" name="medicalInsuranceName" placeholder="Ingrese la obra social" ng-model="vm.entry.medicalInsurance.name" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.medicalInsuranceNumber.$invalid && (vm.medicalInformationForm.medicalInsuranceNumber.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="medicalInsuranceNumber">Número</label>
+                    <input type="text" class="form-control" id="medicalInsuranceNumber" name="medicalInsuranceNumber" placeholder="Ingrese N° de socio" ng-model="vm.entry.medicalInsurance.number" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.bloodType.$invalid && (vm.medicalInformationForm.bloodType.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="bloodType">Tipo de sangre</label>
+                    <input type="text" class="form-control" id="bloodType" name="bloodType" placeholder="Ingrese el tipo de sangre" ng-model="vm.entry.bloodType" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.height.$invalid && (vm.medicalInformationForm.height.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="height">Altura</label>
+                    <input type="text" class="form-control" id="height" name="height" placeholder="Ingrese la altura" ng-model="vm.entry.height" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.weight.$invalid && (vm.medicalInformationForm.weight.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="weight">Peso</label>
+                    <input type="text" class="form-control" id="weight" name="weight" placeholder="Ingrese el peso" ng-model="vm.entry.weight" required>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.allergies.$invalid && (vm.medicalInformationForm.allergies.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="allergies">Alérgias</label>
+                    <textarea cols="10" rows="2" class="form-control" id="allergies" name="allergies" ng-model="vm.entry.allergies" placeholder="Ingrese las alergias"></textarea>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.professional.$invalid && (vm.medicalInformationForm.professional.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="professional">Profesional</label>
+                     <select ng-model="vm.entry.professional.id" class="form-control" id="professional" name="professional" ng-options="professionals.id as professionals.userName for professionals in vm.professionals" required=""></select>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.treatment.$invalid && (vm.medicalInformationForm.treatment.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="treatment">Tratamiento</label>
+                     <select ng-model="vm.entry.treatment.treatmentTemplate.id" class="form-control" id="treatment" name="treatment" ng-options="treatmentsTemplates.id as treatmentsTemplates.name for treatmentsTemplates in vm.treatmentsTemplates" required=""></select>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error': vm.medicalInformationForm.description.$invalid && (vm.medicalInformationForm.description.$dirty || vm.medicalInformationForm.$submitted)}">
+                    <label for="description">Descripción</label>
+                    <textarea cols="10" rows="2" class="form-control" id="description" name="description" ng-model="vm.entry.treatment.description" placeholder="Ingrese la Descripción del tratamiento" required=""></textarea>
+                    <span class="help-block error-block basic-block">Requerido</span>
+                  </div>
+                  
+                </div>
+                <div class="col-sm-offset-5 col-sm-7">
+                    <div class="button-wrapper">
+                      <button type="submit" class="btn btn-success">Finalizar carga</button>
+                    </div>
+                </div>
+              </div>
+            </form>
+          </ba-wizard-step>
+        </ba-wizard>
+      </div>
+    </div>
+  </div>
+</div>

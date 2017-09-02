@@ -7,6 +7,7 @@
 
   angular.module('SimoreFrontend.pages.patients', [
     'ui.select',
+    'ngSanitize',
     'SimoreFrontend.pages.patients.create',
     'SimoreFrontend.pages.patients.index',
   ])
