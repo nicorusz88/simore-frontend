@@ -13,7 +13,7 @@
     var vm = this;
     vm.users = [];
     vm.displayedUsers = [];
-    User.query({cmd: 'roles', roles: 'PACIENT'}, function(data) {
+    User.query({ cmd: 'roles', roles: 'PACIENT' }, function(data) {
       vm.users = data;
       vm.displayedUsers = data;
     });

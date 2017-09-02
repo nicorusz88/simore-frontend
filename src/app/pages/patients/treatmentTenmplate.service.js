@@ -2,7 +2,7 @@
  * Created by SimoreTeam
  */
 
-(function () {
+(function() {
   'use strict';
 
   angular.module('SimoreFrontend.pages.patients')
@@ -10,12 +10,9 @@
 
   /** @ngInject */
   function TreatmentTemplate($resource, config) {
-    return $resource(config.apiUrl + ':' + config.apiPort + '/treatments-templates/:treatmentTemplateId/:cmd', {treatmentTemplateId: '@id'}, {
-      'update': { method:'PUT'}
+    return $resource(config.apiUrl + ':' + config.apiPort + '/treatments-templates/:treatmentTemplateId/:cmd', { treatmentTemplateId: '@id' }, {
+      'update': { method: 'PUT' }
     });
   }
-
-
-  
 
 })();

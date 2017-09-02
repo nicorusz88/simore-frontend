@@ -2,17 +2,17 @@
  * @author SimoreTeam
  * created on 16.12.2015
  */
-(function () {
+(function() {
   'use strict';
 
   angular.module('SimoreFrontend.pages.patients.treatment')
-      .controller('PatientsTreatmentCtrl', PatientsTreatmentCtrl);
+    .controller('PatientsTreatmentCtrl', PatientsTreatmentCtrl);
 
   /** @ngInject */
   function PatientsTreatmentCtrl($scope, $state, User, TreatmentTemplate) {
     var vm = this;
-    vm.entry = new User({roles: [{id: 2, name: 'PACIENT'}]});
-    
+    vm.entry = new User({ roles: [{ id: 2, name: 'PACIENT' }] });
+
     vm.save = save;
     vm.arePersonalInfoPasswordsEqual = arePersonalInfoPasswordsEqual;
 
@@ -23,24 +23,24 @@
       vm.treatmentsTemplates = data;
     });
 
-    User.query({cmd: 'roles', roles: 'PROFESSIONAL'}, function(data) {
+    User.query({ cmd: 'roles', roles: 'PROFESSIONAL' }, function(data) {
       vm.proffesionals = data;
     });
 
     vm.dt = new Date();
     vm.options = {
-        showWeeks: false
+      showWeeks: false
     };
 
     vm.open = open;
     vm.opened = false;
     vm.options = {
-        showWeeks: false
+      showWeeks: false
     };
 
     ////////////////////
 
-    function arePersonalInfoPasswordsEqual(){
+    function arePersonalInfoPasswordsEqual() {
       return vm.entry.confirmPassword && vm.entry.password == vm.entry.confirmPassword;
     }
 
@@ -48,12 +48,12 @@
       vm.opened = true;
     }
 
-    function save (form) {
+    function save(form) {
       if (form.$valid) {
         vm.error = {};
 
         vm.entry.$save({}, function() {
-          $state.go('patients.index', null, {reload: true});
+          $state.go('patients.index', null, { reload: true });
         });
       }
     }

@@ -15,7 +15,8 @@
           url: '/update/:userId',
           templateUrl: 'app/pages/users/update/update.html',
           controller: 'UsersUpdateCtrl',
-          controllerAs: "vm",
+          controllerAs: 'vm',
+          title: 'Editar usuario'
         });
   }
 
