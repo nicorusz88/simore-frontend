@@ -34,7 +34,7 @@
         <td>{{item.professional.firstName}}, {{item.professional.lastName}}</td>
         <td>{{item.treatment.treatmentTemplate.name}}</a></td>
         <td>
-          <a ui-sref="users.update({userId: item.id})" class="btn btn-primary btn-icon"><i class="ion-edit"></i></a>
+          <a ui-sref="patients.update({patientId: item.id})" class="btn btn-primary btn-icon"><i class="ion-edit"></i></a>
           <a ui-sref="patients.treatment({patientId: item.id})" class="btn btn-success btn-icon"><i class="ion-medkit"></i></a>
           <button class="btn btn-danger btn-icon"><i class="ion-trash-a"></i></button>
         </td>

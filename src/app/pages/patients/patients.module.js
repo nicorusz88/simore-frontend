@@ -9,6 +9,7 @@
     'ui.select',
     'ngSanitize',
     'SimoreFrontend.pages.patients.create',
+    'SimoreFrontend.pages.patients.update',
     'SimoreFrontend.pages.patients.index',
     'SimoreFrontend.pages.patients.treatment',
   ])

@@ -44,7 +44,7 @@
                 <div class="col-md-6">
                   <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.gender.$invalid && (vm.personalInfoForm.gender.$dirty || vm.personalInfoForm.$submitted)}">
                     <label for="gender">Sexo</label>
-                    <select id="gender" name="gender" ng-model="vm.personalInfoForm.gender" class="form-control" required="">
+                    <select id="gender" name="gender" ng-model="vm.entry.gender" class="form-control" required="">
                       <option value="Female">Femenino</option>
                       <option value="Male">Masculino</option>
                     </select>
@@ -53,7 +53,7 @@
                   <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.birthDate.$invalid && (vm.personalInfoForm.birthDate.$dirty || vm.personalInfoForm.$submitted)}">
                     <label for="birthDate">Fecha de nacimiento</label>
                     <p class="input-group">
-                      <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd" datepicker-options="vm.options" ng-model="vm.personalInfoForm.birthDate" is-open="vm.opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" />
+                      <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd" datepicker-options="vm.options" ng-model="vm.entry.birthDate" is-open="vm.opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" />
                       <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="vm.open()">
                           <i class="glyphicon glyphicon-calendar"></i>
