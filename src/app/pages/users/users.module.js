@@ -9,6 +9,7 @@
     'SimoreFrontend.pages.users.create',
     'SimoreFrontend.pages.users.update',
     'SimoreFrontend.pages.users.index',
+    'SimoreFrontend.pages.users.fitbit',
   ])
   .config(routeConfig);
 
@@ -23,7 +24,8 @@
           sidebarMeta: {
             icon: 'ion-person',
             order: 200,
-          },
+            roles: ['ADMINISTRATOR', 'PROFESSIONAL']
+          }
         });
   }
 

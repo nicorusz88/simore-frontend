@@ -13,10 +13,17 @@
     var vm = this;
     vm.users = [];
     vm.displayedUsers = [];
+    vm.fitbitLogin = fitbitLogin;
     User.query({ cmd: 'roles', roles: 'PACIENT' }, function(data) {
       vm.users = data;
       vm.displayedUsers = data;
     });
+
+
+    function fitbitLogin(){
+      var fitbit_client_id = "228L4M";
+      window.location.href = "https://www.fitbit.com/oauth2/authorize?client_id=" + fitbit_client_id + "&response_type=token&scope=activity%20profile&expires_in=31536000";
+    }
 
   }
 

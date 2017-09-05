@@ -8,7 +8,7 @@
     .run(authRun);
 
   /** @ngInject */
-  function authRun($rootScope, $location, $state, $http, principal) {
+  function authRun($rootScope, $location, $state, $http, Auth) {
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 
       event.preventDefault();
@@ -17,7 +17,7 @@
 
       // redirect to login pag if not logged in
 
-      if (principal.isLoggedIn()){
+      if (Auth.isLoggedIn()){
         $state.go(toState.name);
       }else{
         if ($location.path() !== '/login'){

@@ -26,6 +26,7 @@
         sidebarMeta: {
           icon: 'ion-medkit',
           order: 200,
+          roles: ['ADMINISTRATOR', 'PROFESSIONAL']
         },
       });
   }

@@ -10,8 +10,13 @@
 
   /** @ngInject */
   function User($resource, config) {
-    return $resource(config.apiUrl + ':' + config.apiPort + '/users/:userId/:cmd', {userId: '@id'}, {
-      'update': { method:'PUT'}
+    return $resource(config.apiUrl + ':' + config.apiPort + '/users/:userId/:cmd', {userId: '@id'}, 
+    {
+      'update': { method:'PUT'},
+      'fitbit': {
+         method: 'POST',
+         params: {'cmd' : 'fitbit'}
+      }
     });
   }
 

@@ -16,7 +16,12 @@
         templateUrl: 'app/pages/patients/update/update.html',
         controller: 'PatientsUpdateCtrl',
         controllerAs: 'vm',
-        title: 'Editar paciente'
+        title: 'Editar paciente',
+        resolve: {
+          canAccess: function (Auth){
+            return Auth.checkRoles(['ADMINISTRATOR', 'PROFESSIONAL']);
+          }
+        }
       });
   }
 

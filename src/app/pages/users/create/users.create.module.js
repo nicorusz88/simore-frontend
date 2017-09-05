@@ -22,6 +22,11 @@
             icon: 'ion-person-add',
             order: 220,
           },
+          resolve: {
+            canAccess: function (Auth){
+              return Auth.checkRoles(['ADMINISTRATOR', 'PROFESSIONAL']);
+            }
+          }
         });
   }
 

@@ -17,14 +17,14 @@
     vm.arePersonalInfoPasswordsEqual = arePersonalInfoPasswordsEqual;
 
     vm.treatmentsTemplates = [];
-    vm.proffesionals = [];
+    vm.professionals = [];
 
     TreatmentTemplate.query({}, function(data) {
       vm.treatmentsTemplates = data;
     });
 
     User.query({cmd: 'roles', roles: 'PROFESSIONAL'}, function(data) {
-      vm.proffesionals = data;
+      vm.professionals = data;
     });
 
     vm.dt = new Date();

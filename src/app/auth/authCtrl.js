@@ -9,12 +9,12 @@
     .controller('authCtrl', authCtrl);
 
   /** @ngInject */
-  function authCtrl($state, $cookies, $http, $rootScope, principal) {
+  function authCtrl($state, $cookies, $http, $rootScope, Auth) {
     var vm = this;
 
     vm.login = login;
     vm.entry = {};
-    vm.principalResource = principal.getResource();
+    vm.principalResource = Auth.getResource();
 
     function login(){
       vm.principalResource.authenticate($.param(vm.entry), function(user){

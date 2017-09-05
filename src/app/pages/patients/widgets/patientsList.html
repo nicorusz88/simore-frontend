@@ -7,7 +7,7 @@
         <th st-sort="lastName">Apellido</th>
         <th st-sort="userName">Profesional</th>
         <th st-sort="email">Tratamiento</th>
-        <th>Roles</th>
+        <th></th>
         <th></th>
       </tr>
       <tr>
@@ -38,6 +38,7 @@
           <a ui-sref="patients.update({patientId: item.id})" class="btn btn-primary btn-icon"><i class="ion-edit"></i></a>
           <a ui-sref="patients.treatment({patientId: item.id})" class="btn btn-success btn-icon"><i class="ion-medkit"></i></a>
           <button class="btn btn-danger btn-icon"><i class="ion-trash-a"></i></button>
+          <button class="btn btn-info btn-icon" ng-click="vm.fitbitLogin()">Fitbit</button>
         </td>
       </tr>
     </tbody>

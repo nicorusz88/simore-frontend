@@ -6,16 +6,18 @@
   'use strict';
 
   angular.module('SimoreFrontend.auth')
-    .service('principal', principal);
+    .service('Auth', Auth);
 
   /** @ngInject */
-  function principal($resource, $http, $cookies, config) {
+  function Auth($resource, $http, $cookies, config) {
     var vm = this;
     vm.user = null;
 
     var service = {
       getResource: getResource,
       isLoggedIn: isLoggedIn,
+      checkRoles: checkRoles,
+      checkAnyRoles: checkAnyRoles
     };
 
     function getResource(){
@@ -38,9 +40,31 @@
         return vm.user;
 
       }else{
-
         return false;
+      }
+    }
 
+    function checkRoles(roles) {
+      if (isLoggedIn()){
+        var userRoles = Object.keys(vm.user.roles);
+        var result = userRoles.filter(function(n) {
+            return roles.indexOf(n) != -1;
+        });
+        return result.length == roles.length;
+      }else{
+        return false;
+      }
+    }
+
+    function checkAnyRoles(roles) {
+      if (isLoggedIn()){
+        var userRoles = Object.keys(vm.user.roles);
+        var result = userRoles.filter(function(n) {
+            return roles.indexOf(n) != -1;
+        });
+        return result.length > 0;
+      }else{
+        return false;
       }
     }
 

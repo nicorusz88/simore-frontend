@@ -21,6 +21,11 @@
           icon: 'ion-person-stalker',
           order: 210,
         },
+        resolve: {
+          canAccess: function (Auth){
+            return Auth.checkRoles(['ADMINISTRATOR', 'PROFESSIONAL']);
+          }
+        }
       });
   }
 

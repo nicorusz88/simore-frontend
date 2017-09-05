@@ -13,7 +13,7 @@
     };
 
     /** @ngInject */
-    this.$get = function($state, layoutSizes) {
+    this.$get = function($state, layoutSizes, Auth) {
       return new _factory();
 
       function _factory() {
@@ -37,6 +37,10 @@
 
         this.shouldMenuBeCollapsed = shouldMenuBeCollapsed;
         this.canSidebarBeHidden = canSidebarBeHidden;
+
+        this.shouldShowMenu = function(){
+          return Auth.isLoggedIn();
+        };
 
         this.setMenuCollapsed = function(isCollapsed) {
           isMenuCollapsed = isCollapsed;
@@ -70,6 +74,7 @@
               })
               .map(function(s) {
                 var meta = s.sidebarMeta;
+                var visible = meta.roles && Auth.checkAnyRoles(meta.roles);
                 return {
                   name: s.name,
                   title: s.title,
@@ -77,6 +82,7 @@
                   order: meta.order,
                   icon: meta.icon,
                   stateRef: s.name,
+                  visible: visible
                 };
               })
               .sort(function(a, b) {

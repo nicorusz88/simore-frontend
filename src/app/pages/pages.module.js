@@ -18,8 +18,7 @@
     //'SimoreFrontend.pages.charts',
     //'SimoreFrontend.pages.maps',
     //'SimoreFrontend.pages.profile',
-  ])
-      .config(routeConfig);
+  ]).config(routeConfig);
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {

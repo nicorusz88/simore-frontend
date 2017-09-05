@@ -16,7 +16,12 @@
           templateUrl: 'app/pages/users/update/update.html',
           controller: 'UsersUpdateCtrl',
           controllerAs: 'vm',
-          title: 'Editar usuario'
+          title: 'Editar usuario',
+          resolve: {
+            canAccess: function (Auth){
+              return Auth.checkRoles(['ADMINISTRATOR', 'PROFESSIONAL']);
+            }
+          }
         });
   }
 
