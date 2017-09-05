@@ -24,7 +24,7 @@
           sidebarMeta: {
             icon: 'ion-person',
             order: 200,
-            roles: ['ADMINISTRATOR', 'PROFESSIONAL']
+            roles: ['ADMINISTRATOR']
           }
         });
   }

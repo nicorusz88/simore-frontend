@@ -13,6 +13,7 @@
 
     $scope.menuItems = baSidebarService.getMenuItems();
     $scope.defaultSidebarState = $scope.menuItems[0].stateRef;
+    $scope.hideMenu = baSidebarService.shouldShowMenu();
 
     $scope.hoverItem = function ($event) {
       $scope.showHoverElem = true;

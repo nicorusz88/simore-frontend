@@ -13,6 +13,7 @@
     return {
       restrict: 'E',
       templateUrl: 'app/theme/components/contentTop/contentTop.html',
+      controller: "ContentTopCtrl",
       link: function($scope) {
         $scope.$watch(function () {
           $scope.activePageTitle = $state.current.title;

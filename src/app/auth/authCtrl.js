@@ -21,7 +21,7 @@
         $rootScope.user = user;
         $http.defaults.headers.common['x-auth-token'] = user.token;
         $cookies.put('user', JSON.stringify(user));
-        $state.go('dashboard');
+        window.location.href = "/";
       });
 
     }
