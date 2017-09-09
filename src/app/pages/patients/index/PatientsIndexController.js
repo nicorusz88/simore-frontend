@@ -22,7 +22,7 @@
 
     function fitbitLogin(){
       var fitbit_client_id = "228L4M";
-      window.location.href = "https://www.fitbit.com/oauth2/authorize?client_id=" + fitbit_client_id + "&response_type=token&scope=activity%20profile&expires_in=31536000";
+      window.location.href = "https://www.fitbit.com/oauth2/authorize?client_id=" + fitbit_client_id + "&response_type=token&scope=activity%20profile%20heartrate%20location%20nutrition%20sleep%20weight&expires_in=31536000";
     }
 
   }
