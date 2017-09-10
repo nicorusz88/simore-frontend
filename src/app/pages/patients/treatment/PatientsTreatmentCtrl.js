@@ -11,7 +11,7 @@
   /** @ngInject */
   function PatientsTreatmentCtrl($scope, $state, User, TreatmentTemplate) {
     var vm = this;
-    vm.entry = new User({ roles: [{ id: 2, name: 'PACIENT' }] });
+    vm.entry = new User({ roles: [{ id: 2, name: 'PATIENT' }] });
 
     vm.save = save;
     vm.arePersonalInfoPasswordsEqual = arePersonalInfoPasswordsEqual;

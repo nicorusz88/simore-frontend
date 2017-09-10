@@ -14,7 +14,7 @@
     vm.users = [];
     vm.displayedUsers = [];
     vm.fitbitLogin = fitbitLogin;
-    User.query({ cmd: 'roles', roles: 'PACIENT' }, function(data) {
+    User.query({ cmd: 'roles', roles: 'PATIENT' }, function(data) {
       vm.users = data;
       vm.displayedUsers = data;
     });
