@@ -74,7 +74,10 @@
               })
               .map(function(s) {
                 var meta = s.sidebarMeta;
-                var visible = meta.roles && Auth.checkAnyRoles(meta.roles);
+                var visible = true;
+                if (meta.roles){
+                  visible = meta.roles && Auth.checkAnyRoles(meta.roles);
+                }
                 return {
                   name: s.name,
                   title: s.title,
