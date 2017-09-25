@@ -17,7 +17,7 @@
           templateUrl: 'app/pages/treatments/create/create.html',
           controller: 'TreatmentsCreateCtrl',
           controllerAs: "vm",
-          title: 'Nuevo trtamiento',
+          title: 'Nuevo tratamiento',
           sidebarMeta: {
             icon: 'ion-person-add',
             order: 310,
