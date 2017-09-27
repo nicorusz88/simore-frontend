@@ -58,7 +58,7 @@
         vm.error = {};
 
         User.update({ userId: $stateParams.patientId }, vm.entry, function(){
-          $state.go('patients.index', null, {reload: true});
+          $state.go('patients.treatment', {patientId: vm.entry.id}, {reload: true});
         });
       }
     }

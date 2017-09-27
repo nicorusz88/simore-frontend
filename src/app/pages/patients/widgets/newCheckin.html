@@ -1,0 +1,25 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+      <em class="ion-ios-close-empty sn-link-close"></em>
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Nuevo Checkin</h4>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" name="form" role="form" novalidate>
+      <div class="form-group">
+        <label for="treatment" class="col-sm-4 control-label">Pregunta</label>
+        <div class="col-sm-8">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="treatment" class="col-sm-4 control-label">Tipo</label>
+        <div class="col-sm-8">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="$ctrl.addCheckin(vm.entry)">Guardar</button>
+  </div>
+</div>

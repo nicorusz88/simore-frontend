@@ -1,0 +1,21 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+      <em class="ion-ios-close-empty sn-link-close"></em>
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Nuevo vital</h4>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" name="form" role="form" novalidate>
+      <div class="form-group">
+        <label for="treatment" class="col-sm-4 control-label">Vitales disponibles</label>
+        <div class="col-sm-8">
+          <select ng-model="vm.entry" class="form-control" id="vital" name="vital" ng-options="vitals as vitals.name + ' (' + vitals.wearableType + ')' for vitals in $ctrl.availableVitals" required=""></select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="$ctrl.addVital(vm.entry)">Guardar</button>
+  </div>
+</div>

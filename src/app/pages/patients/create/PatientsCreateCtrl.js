@@ -53,7 +53,7 @@
         vm.error = {};
 
         vm.entry.$save({}, function() {
-          $state.go('patients.index', null, {reload: true});
+          $state.go('patients.treatment', {patientId: vm.entry.id}, {reload: true});
         });
       }
     }
