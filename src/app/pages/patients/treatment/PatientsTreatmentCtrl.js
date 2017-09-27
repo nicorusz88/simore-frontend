@@ -9,7 +9,7 @@
     .controller('PatientsTreatmentCtrl', PatientsTreatmentCtrl);
 
   /** @ngInject */
-  function PatientsTreatmentCtrl($scope, $stateParams, $state, $uibModal, User, Vital, Checkin, Medication, Appointment, Recomendation) {
+  function PatientsTreatmentCtrl($scope, $stateParams, $state, $uibModal, User, Vital, Checkin, Medication, Appointment, Recommendation) {
     var vm = this;
     vm.entry = undefined;
 
@@ -33,10 +33,10 @@
     vm.newAppointmentModal = undefined;
     vm.addAppointment = addAppointment;
 
-    // Recomendations
-    vm.newRecomendation = newRecomendation;
-    vm.newRecomendationModal = undefined;
-    vm.addRecomendation = addRecomendation;
+    // Recommendations
+    vm.newRecommendation = newRecommendation;
+    vm.newRecommendationModal = undefined;
+    vm.addRecommendation = addRecommendation;
 
     loadPatient();
 
@@ -94,8 +94,20 @@
         controllerAs: '$ctrl',
         controller: function(addCheckin){
           var $ctrl = this;
-          $ctrl.checkin = undefined;
+          $ctrl.checkin = {question: {choiceQuestionOptions: []}};
           $ctrl.addCheckin = addCheckin;
+
+          $ctrl.addOption = addOption;
+          $ctrl.removeOption = removeOption;
+
+          function addOption(){
+            $ctrl.checkin.question.choiceQuestionOptions.push({});
+          }
+
+          function removeOption(option){
+            $ctrl.checkin.question.choiceQuestionOptions.splice($ctrl.checkin.question.choiceQuestionOptions.indexOf(option), 1);
+          }
+
         },
         resolve: {
           addCheckin: function(){
@@ -106,7 +118,7 @@
     }
 
     function addCheckin(checkin){
-      if (checkin){
+      if (checkin.name != ''){
         Checkin.addToTreatment({treatmentId: vm.entry.treatment.id}, checkin, function(){
           loadPatient();
         });
@@ -155,8 +167,17 @@
         controllerAs: '$ctrl',
         controller: function(addAppointment){
           var $ctrl = this;
-          $ctrl.appointment = undefined;
+          $ctrl.appointment = {date: new Date()};
           $ctrl.addAppointment = addAppointment;
+
+          // date and time picker
+          $ctrl.datePicker = {
+            date: new Date()
+          };
+
+          $ctrl.openCalendar = function() {
+            $ctrl.datePicker.open = true;
+          };
         },
         resolve: {
           addAppointment: function(){
@@ -176,34 +197,34 @@
     }
 
 
-    // Recomendations Methods
+    // Recommendations Methods
 
-    function newRecomendation(){
-      vm.newRecomendationModal = $uibModal.open({
+    function newRecommendation(){
+      vm.newRecommendationModal = $uibModal.open({
         animation: true,
-        templateUrl: 'app/pages/patients/widgets/newRecomendation.html',
+        templateUrl: 'app/pages/patients/widgets/newRecommendation.html',
         size: 'md',
         controllerAs: '$ctrl',
-        controller: function(addRecomendation){
+        controller: function(addRecommendation){
           var $ctrl = this;
           $ctrl.recomendation = undefined;
-          $ctrl.addRecomendation = addRecomendation;
+          $ctrl.addRecommendation = addRecommendation;
         },
         resolve: {
-          addRecomendation: function(){
-            return vm.addRecomendation;
+          addRecommendation: function(){
+            return vm.addRecommendation;
           }
         }
       });
     }
 
-    function addRecomendation(recomendation){
+    function addRecommendation(recomendation){
       if (recomendation){
-        Recomendation.addToTreatment({treatmentId: vm.entry.treatment.id}, recomendation, function(){
+        Recommendation.addToTreatment({treatmentId: vm.entry.treatment.id}, recomendation, function(){
           loadPatient();
         });
       }
-      vm.newRecomendationModal.close();
+      vm.newRecommendationModal.close();
     }
     
     

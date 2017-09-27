@@ -10,12 +10,12 @@
       <div class="form-group">
         <label for="treatment" class="col-sm-4 control-label">Vitales disponibles</label>
         <div class="col-sm-8">
-          <select ng-model="vm.entry" class="form-control" id="vital" name="vital" ng-options="vitals as vitals.name + ' (' + vitals.wearableType + ')' for vitals in $ctrl.availableVitals" required=""></select>
+          <select ng-model="$ctrl.vital" class="form-control" id="vital" name="vital" ng-options="vitals as vitals.name + ' (' + vitals.wearableType + ')' for vitals in $ctrl.availableVitals" required=""></select>
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary" ng-click="$ctrl.addVital(vm.entry)">Guardar</button>
+    <button type="button" class="btn btn-primary" ng-click="$ctrl.addVital($ctrl.entry)">Guardar</button>
   </div>
 </div>

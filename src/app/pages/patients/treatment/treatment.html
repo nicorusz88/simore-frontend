@@ -171,7 +171,7 @@
                     <p class="text-center" style="padding-top: 5px">{{item.doctor}}</p>
                   </div>
                   <div class="col-md-12">
-                    <p class="text-center" style="padding-top: 5px"><em>{{item.date | date:'dd/MM/yyyy HH:mm:ss'}}hs</em></p>
+                    <p class="text-center" style="padding-top: 5px"><em>{{item.date | date:'dd/MM/yyyy HH:mm'}}hs</em></p>
                     <p class="text-center"><em>{{item.address}}</em></p>
                   </div>
                 </div>
@@ -184,22 +184,19 @@
           <uib-tab heading="Recomendaciones">
             <div class="col-xs-12 col-md-3 col-lg-3" ng-repeat="item in vm.entry.treatment.recommendations">
               <div class="panel panel-default bootstrap-panel xsmall-panel">
-                <div class="panel-heading text-center" style="color: white;">{{item.name}}</div>
+                <div class="panel-heading text-center">{{item.name}}</div>
                 <div class="panel-body footer-panel">
-                  <div class="col-md-6 text-center">
-                    <i class="fa fa-medkit fa-4x" aria-hidden="true" style="color: #a6c733"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="text-center upper-text" style="padding-top: 20px">Cada {{item.frecuency}}hs</p>
+                  <div class="col-md-12 text-center">
+                    <i class="fa fa-bullhorn fa-4x" aria-hidden="true" style="color: #a6c733"></i>
                   </div>
                   <div class="col-md-12">
-                    <p class="text-center" style="padding-top: 10px"><em>Cantidad: {{item.quantity}}</em></p>
+                    <p class="text-center upper-text" style="padding-top: 20px">{{item.text | limitTo: 40 }}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-12 text-right">
-              <button type="button" class="btn btn-default" ng-click="vm.newRecomendation()">+</button>
+              <button type="button" class="btn btn-default" ng-click="vm.newRecommendation()">+</button>
             </div>
           </uib-tab>
         </uib-tabset>
