@@ -18,7 +18,12 @@
       // redirect to login pag if not logged in
 
       if (Auth.isLoggedIn()){
-        $state.go(toState.name);
+        if ($location.path() == '/home' && Auth.checkAnyRoles(['ADMINISTRATOR'])){
+          $state.go('users.index');
+          return;
+        }else{
+          $state.go(toState.name);
+        }
       }else{
         if ($location.path() !== '/login'){
           $state.go('login');

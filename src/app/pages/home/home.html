@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-4 col-md-4 col-lg-3" ng-repeat="patient in vm.patients">
+    <div ba-panel>
+      <div class="col-xs-4">
+        <i class="chart-icon i-face"></i>
+      </div>
+      <div class="col-xs-8"> 
+        <p>{{patient.firstName }}, {{patient.lastName }}</p>
+        <p><span class="label label-primary">{{ patient.treatment.treatmentTemplate.name }}</span></p>
+        <p class="text-right"><a href="#" class="btn btn-xs" ui-sref="patients.dashboard({patientId: patient.id})">Ver más ></a></p>
+      </div>
+    </div>
+  </div>
+</div>

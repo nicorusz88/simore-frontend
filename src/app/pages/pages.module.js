@@ -8,11 +8,10 @@
   angular.module('SimoreFrontend.pages', [
     'ui.router',
 
-    'SimoreFrontend.pages.dashboard',
+    'SimoreFrontend.pages.home',
     'SimoreFrontend.pages.users',
     'SimoreFrontend.pages.treatments',
     'SimoreFrontend.pages.patients',
-    //'SimoreFrontend.pages.components',
     //'SimoreFrontend.pages.form',
     //'SimoreFrontend.pages.tables',
     //'SimoreFrontend.pages.charts',
@@ -22,7 +21,7 @@
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/home');
 
     // baSidebarServiceProvider.addStaticItem({
     //   title: 'Pages',

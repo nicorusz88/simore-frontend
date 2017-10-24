@@ -23,6 +23,7 @@
           sidebarMeta: {
             icon: 'ion-clipboard',
             order: 300,
+            roles: ['ADMINISTRATOR', 'PROFESSIONAL']
           },
         });
   }

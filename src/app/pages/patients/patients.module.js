@@ -12,6 +12,7 @@
       'SimoreFrontend.pages.patients.update',
       'SimoreFrontend.pages.patients.index',
       'SimoreFrontend.pages.patients.treatment',
+      'SimoreFrontend.pages.patients.dashboard',
     ])
     .config(routeConfig);
 
@@ -26,7 +27,7 @@
         sidebarMeta: {
           icon: 'ion-medkit',
           order: 200,
-          roles: ['ADMINISTRATOR', 'PROFESSIONAL']
+          roles: ['PROFESSIONAL']
         },
       });
   }

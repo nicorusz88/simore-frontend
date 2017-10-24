@@ -16,6 +16,11 @@
       'fitbit': {
          method: 'POST',
          params: {'cmd' : 'fitbit'}
+      },
+      'getPatients': {
+         method: 'GET',
+         params: {'cmd' : 'get-patients'},
+         isArray: true
       }
     });
   }
