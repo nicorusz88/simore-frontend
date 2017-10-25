@@ -1,21 +1,45 @@
-<div class="row">
-  <div class="col-md-4">
-    <div class="row">
-      <div class="col-xs-8 text-left">Max</div>
-      <div class="col-xs-4 text-left">47,512</div>
+<div class="text-center" style="color: red">
+  <i class="fa fa-heart fa-5x"></i>
+  <span style="color: black">bpm</span>
+</div>
+<hr>
+<div class="popular-app-info row">
+  <div class="col-xs-6">
+    {{item.name}}
+  </div>
+  <div class="col-xs-2 text-center">
+    <div class="info-label"><i class="fa fa-arrow-up"></i></div>
+  </div>
+  <div class="col-xs-2 text-center">
+    <div class="info-label"><i class="fa fa-arrow-down"></i></div>
+  </div>
+  <div class="col-xs-2 text-center">
+    <div class="info-label"><i class="fa fa-clock-o"></i></div>
+  </div>
+</div>
+<div class="popular-app-info row" ng-repeat="item in vm.data" style="padding: 3px 0px;">
+  <div ng-if="item.name != 'Resting Heart Rate'">
+    <div class="col-xs-6">
+      {{item.name}}
     </div>
-    <div class="row">
-      <div class="col-xs-8 text-left">Min</div>
-      <div class="col-xs-4 text-left">47,512</div>
+    <div class="col-xs-2 text-center">
+      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.max}}</div>
     </div>
-    <div class="row">
-      <div class="col-xs-8 text-left">AVG</div>
-      <div class="col-xs-4 text-left">47,512</div>
+    <div class="col-xs-2 text-center">
+      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.min}}</div>
+    </div>
+    <div class="col-xs-2 text-center">
+      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.minutes}}</div>
     </div>
   </div>
-  <div class="col-md-8">
-    <div class="text-center">15:12 23/20/2017</div>
-    <div class="text-center"><i class="fa fa-heart fa-3x"></i> <span>175</span></div>  
+  <div ng-if="item.name == 'Resting Heart Rate'">
+    <hr>
+    <div class="col-xs-6">
+      {{item.name}}
+    </div>
+    <div class="col-xs-6 text-center">
+      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.max}}</div>
+    </div>
   </div>
 </div>
 

@@ -18,6 +18,38 @@
           'type' : 'heart-rate',
           'cmd': 'date'
         },
+      },
+      'steps': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'steps',
+          'cmd': 'date'
+        },
+      },
+      'weight': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'weight',
+          'cmd': 'date'
+        },
+      },
+      'burntCalories': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'burnt-calories',
+          'cmd': 'date'
+        },
+      },
+      'bloodPressure': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'blood-pressure',
+          'cmd': 'date'
+        },
       }
     });
   }

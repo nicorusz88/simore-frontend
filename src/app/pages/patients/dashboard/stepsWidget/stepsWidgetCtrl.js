@@ -6,15 +6,15 @@
   'use strict';
 
   angular.module('SimoreFrontend.pages.patients.dashboard')
-      .controller('HeartRateWidgetCtrl', HeartRateWidgetCtrl);
+      .controller('StepsWidgetCtrl', StepsWidgetCtrl);
 
   /** @ngInject */
-  function HeartRateWidgetCtrl($scope, FitBitMeasurement, colorHelper) {
+  function StepsWidgetCtrl($scope, FitBitMeasurement, colorHelper) {
       var vm = this;
       vm.patient = $scope.patient;
       vm.data = undefined;
 
-      FitBitMeasurement.heartRate({treatmentId: vm.patient.treatment.id, date: moment().format("YYYY-MM-DD")}, function(data){
+      FitBitMeasurement.steps({treatmentId: vm.patient.treatment.id, date: moment().format("YYYY-MM-DD")}, function(data){
         vm.data = data;
       });
 
