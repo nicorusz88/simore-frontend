@@ -1,6 +1,5 @@
 /**
- * @author v.lugovksy
- * created on 16.12.2015
+ * @author SimoreTeam
  */
 (function () {
   'use strict';

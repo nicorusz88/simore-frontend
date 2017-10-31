@@ -1,6 +1,5 @@
 /**
  * @author SimoreTeam
- * created on 22.12.2015
  */
 (function () {
   'use strict';
