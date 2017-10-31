@@ -23,6 +23,8 @@
         $cookies.put('user', JSON.stringify(user));
         
         window.location.href = "/";
+      },function(data){
+        
       });
 
     }

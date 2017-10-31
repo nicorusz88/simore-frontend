@@ -13,6 +13,7 @@
       'SimoreFrontend.pages.patients.index',
       'SimoreFrontend.pages.patients.treatment',
       'SimoreFrontend.pages.patients.dashboard',
+      'SimoreFrontend.pages.patients.charts',
     ])
     .config(routeConfig);
 

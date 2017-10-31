@@ -2,25 +2,39 @@
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Heart Rate"
-       ba-panel-class="medium-panel">
+       ba-panel-class="medium-panel" ng-if="vm.entry && vm.hasVital('HEART_RATE')">
     <heart-rate-widget patient="vm.entry" ng-if="vm.entry"></heart-rate-widget>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Peso"
-       ba-panel-class="xsmall-panel">
+       ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('WEIGHT')">
     <weight-widget patient="vm.entry" ng-if="vm.entry"></weight-widget>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Calorías quemadas"
-       ba-panel-class="xsmall-panel">
+       ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('BURNT_CALORIES')">
     <burnt-calories-widget patient="vm.entry" ng-if="vm.entry"></burnt-calories-widget>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Pasos"
-       ba-panel-class="xsmall-panel">
+       ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('STEPS')">
     <steps-widget patient="vm.entry" ng-if="vm.entry"></steps-widget>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-12"
+       ba-panel
+       ba-panel-title="Medicaciones"
+       ba-panel-class="xsmall-panel with-scroll" ng-if="vm.entry && vm.hasCheckins()">
+    <medications-widget patient="vm.entry" ng-if="vm.entry"></medications-widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-12"
+       ba-panel
+       ba-panel-title="Checkins"
+       ba-panel-class="xsmall-panel with-scroll" ng-if="vm.entry && vm.hasMedications()">
+    <checkins-widget patient="vm.entry" ng-if="vm.entry"></checkins-widget>
   </div>
 </div>
