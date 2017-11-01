@@ -14,10 +14,6 @@
       vm.patient = $scope.patient;
       vm.data = undefined;
 
-      FitBitMeasurement.heartRate({treatmentId: vm.patient.treatment.id, date: moment().format("YYYY-MM-DD")}, function(data){
-        vm.data = data;
-      });
-
 
   }
 })();

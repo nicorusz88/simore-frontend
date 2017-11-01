@@ -1,11 +1,16 @@
 <div class="row">
   <div class="col-md-12" >
     <h1 class="text-center" style="margin: 20px 0px">
-      <span style="border: solid 2px #eee; border-radius: 50%; text-align: center; padding: 20px">
-        <span ng-if="vm.data">{{vm.data[0].value}}</span>
+        <span ng-if="vm.data">{{vm.data[0].weight}}</span>
         <span ng-if="!vm.data">-</span>
-        <small>Kg.</small></span>
+        <small>Kg.</small>
     </h1>
+  </div>
+  <div class="col-md-6 text-center">
+    <span ng-if="vm.data">{{vm.data[0].fat}}% de Grasas</span>
+  </div>
+  <div class="col-md-6 text-center">
+    <span ng-if="vm.data">IMC: {{vm.data[0].bmi}}</span>
   </div>
 </div>
 

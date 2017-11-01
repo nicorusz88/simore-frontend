@@ -10,7 +10,7 @@
 
   /** @ngInject */
   function FitBitMeasurement($resource, config) {
-    return $resource(config.apiUrl + ':' + config.apiPort + '/measurements/fitbit/:type/treatment/:treatmentId/:cmd/:date', { }, {
+    return $resource(config.apiUrl + ':' + config.apiPort + '/measurements/fitbit/:type/treatment/:treatmentId/:cmd/:date/:cmd2/:date2', { }, {
       'heartRate': { 
         method: 'GET',
         isArray: true,
@@ -50,7 +50,15 @@
           'type' : 'blood-pressure',
           'cmd': 'date'
         },
-      }
+      },
+      'distance': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'distance',
+          'cmd': 'date'
+        }
+      },
     });
   }
 
