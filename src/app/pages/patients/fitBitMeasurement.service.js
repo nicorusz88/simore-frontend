@@ -59,6 +59,15 @@
           'cmd': 'date'
         }
       },
+      'heartRateHistory': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'heart-rate',
+          'cmd': 'start-date',
+          'cmd2': 'end-date'
+        }
+      }
     });
   }
 

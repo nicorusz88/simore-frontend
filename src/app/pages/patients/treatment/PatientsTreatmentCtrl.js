@@ -119,6 +119,9 @@
 
     function addCheckin(checkin){
       if (checkin.name != ''){
+        if (checkin.question.choiceQuestionOptions.length == 0){
+          delete checkin.question.choiceQuestionOptions;
+        }
         Checkin.addToTreatment({treatmentId: vm.entry.treatment.id}, checkin, function(){
           loadPatient();
         });
