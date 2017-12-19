@@ -1,6 +1,6 @@
 <div class="text-center" style="color: red">
   <i class="fa fa-heart fa-5x"></i>
-  <span style="color: black">bpm</span>
+  <span style="color: black">Latidos Por Minuto (BPM)</span>
 </div>
 <hr>
 <div class="popular-app-info row">
@@ -8,13 +8,13 @@
     {{item.name}}
   </div>
   <div class="col-xs-2 text-center">
-    <div class="info-label"><i class="fa fa-arrow-up"></i></div>
+    <div class="info-label"><i class="fa fa-arrow-down"> Min. bpm</i></div>
   </div>
   <div class="col-xs-2 text-center">
-    <div class="info-label"><i class="fa fa-arrow-down"></i></div>
+    <div class="info-label"><i class="fa fa-arrow-up"> Max. bpm</i></div>
   </div>
   <div class="col-xs-2 text-center">
-    <div class="info-label"><i class="fa fa-clock-o"></i></div>
+    <div class="info-label"><i class="fa fa-clock-o"> Mins.</i></div>
   </div>
 </div>
 <div class="popular-app-info row" ng-repeat="item in vm.data" style="padding: 3px 0px;">
@@ -23,10 +23,10 @@
       {{item.name}}
     </div>
     <div class="col-xs-2 text-center">
-      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.max}}</div>
+      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.min}}</div>
     </div>
     <div class="col-xs-2 text-center">
-      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.min}}</div>
+      <div style="border: solid 1px #eee; border-radius: 12px;">{{item.max}}</div>
     </div>
     <div class="col-xs-2 text-center">
       <div style="border: solid 1px #eee; border-radius: 12px;">{{item.minutes}}</div>
