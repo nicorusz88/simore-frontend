@@ -16,11 +16,11 @@
 
     vm.labels =[];
     vm.data = [
-      [],
-      [],
-      [],
-      [],
-      []
+      [1, 2],
+      [2, 2],
+      [2, 3],
+      [2, 4],
+      [5, 6]
     ];
     vm.series = ['Distancia [KM]'];
     vm.loadData = loadData;
@@ -54,19 +54,28 @@
 
     function loadData(){
       FitBitMeasurement.heartRateHistory({treatmentId: vm.entry.treatment.id, date: moment(vm.dateFrom).format('YYYY-MM-DD'), date2: moment(vm.dateTo).format('YYYY-MM-DD')}, function(data){
-        var dataPerDay = [];
+        var dataPerDay = [
+          [],
+          [],
+          [],
+          [],
+          []
+        ];
         var labels = [];
 
         for(var i = 0; i < data.length; i++){
-          var day = moment(data[i].date).format('YYYY-MM-DD');
-          if (! (day in labels)){
-            labels.push(day);
+          var fitBitHeartRateMeasurementList = data[i].fitBitHeartRateMeasurementList;
+          for(var j = 0; j < fitBitHeartRateMeasurementList.length; j++){
+            dataPerDay[j].push(fitBitHeartRateMeasurementList[j].minutes);
           }
-          //labels[i] = moment(data[i].date).format('YYYY-MM-DD');
+          
+          var day = moment(data[i].date).format('YYYY-MM-DD');
+          labels.push(day);
         }
 
-        console.log(labels);
+        console.log(dataPerDay);
 
+        vm.data = dataPerDay;
         vm.labels = labels;
       });
     }

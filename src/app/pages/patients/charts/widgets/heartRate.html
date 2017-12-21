@@ -34,9 +34,18 @@
         </div>
       </form>
       <div class="chartjs-canvas-holder-third-row">
-        <canvas id="line" class="chart chart-line" chart-data="vm.data" chart-labels="vm.labels"
+        <canvas id="bar" class="chart chart-bar" chart-data="vm.data" chart-labels="vm.labels"
                         chart-series="vm.series" chart-click="vm.loadData"></canvas>
       </div>
+
+      <p class="text-center">
+        <button class="btn btn-xs btn-primary">Fuera de rango (30-95 BPM)</button>
+        <button class="btn btn-xs btn-danger">Descanso (N/A BPM)</button>
+        <button class="btn btn-xs btn-warning">Quema de grasa (95-113 BPM)</button>
+        <button class="btn btn-xs btn-success">Cardio (113-162 BPM)</button>
+        <button class="btn btn-xs btn-info">Pico (162-220 BPM)</button>
+      </p>
+      
     </div>
   </div>
 </div>
