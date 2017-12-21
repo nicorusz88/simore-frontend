@@ -11,7 +11,6 @@
     'SimoreFrontend.pages.users',
     'SimoreFrontend.pages.treatments',
     'SimoreFrontend.pages.patients',
-    'SimoreFrontend.pages.components',
     //'SimoreFrontend.pages.tables',
     //'SimoreFrontend.pages.charts',
     //'SimoreFrontend.pages.maps',
