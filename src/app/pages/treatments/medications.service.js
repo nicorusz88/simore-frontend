@@ -10,10 +10,17 @@
 
   /** @ngInject */
   function Medication($resource, config) {
-    return $resource(config.apiUrl + ':' + config.apiPort + '/medications/:cmd', {}, {
+    return $resource(config.apiUrl + ':' + config.apiPort + '/medications/:cmd/:userId', {}, {
       'addToTreatment': {
           method: 'POST',
           params: {'cmd' : 'add-to-treatment'}
+      },
+      'user': {
+        method: 'GET',
+        isArray: true,
+        params: {
+          'cmd' : 'user'
+        }
       }
     });
   }

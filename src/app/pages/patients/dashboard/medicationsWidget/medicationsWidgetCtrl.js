@@ -9,12 +9,19 @@
       .controller('MedicationsWidgetCtrl', MedicationsWidgetCtrl);
 
   /** @ngInject */
-  function MedicationsWidgetCtrl($scope, FitBitMeasurement, colorHelper) {
+  function MedicationsWidgetCtrl($scope, Medication, colorHelper) {
       var vm = this;
       vm.patient = $scope.patient;
       vm.data = undefined;
 
+      loadMedications();
 
+
+      function loadMedications(){
+        Medication.user({userId: vm.patient.id}, function(data){
+          vm.data = data;
+        });
+      }
 
   }
 })();
