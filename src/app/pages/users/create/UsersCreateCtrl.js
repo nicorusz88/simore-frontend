@@ -9,11 +9,14 @@
       .controller('UsersCreateCtrl', UsersCreateCtrl);
 
   /** @ngInject */
-  function UsersCreateCtrl($state, User) {
+  function UsersCreateCtrl($state, User, Role) {
     var vm = this;
     vm.entry = new User({});
     vm.error = {};
     vm.save = save;
+    vm.roles = [];
+
+
 
 
     ////////////////////

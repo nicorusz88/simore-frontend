@@ -1,0 +1,10 @@
+<div ng-repeat="item in vm.messages" ng-class="{patient: item.from.id == vm.patient.id, professional: item.from.id == vm.professional.id}">
+  <div class="messageContainer">
+    <p>{{item.text}}</p>
+    <p class="date">{{item.sendDate | date: 'dd/MM/yyyy HH:mm:ss'}}hs</p>
+  </div>
+</div>
+
+<input type="text" class="form-control" id="messageText" name="messageText" placeholder="Esciba el mensaje aqui" ng-model="vm.messageText">
+
+<button type="button" class="btn btn-primary" ng-click="vm.send()">Enviar</button>

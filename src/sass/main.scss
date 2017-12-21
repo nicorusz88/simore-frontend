@@ -1,4 +1,30 @@
 @import 'common';
 
+.professional {
+  padding-left: 40%;
+
+  .messageContainer {
+    background: #dcf8c6;
+  }
+
+  .date {
+    font-size: 0.8em;
+    color: #888;
+  }
+}
+
+.patient {
+  padding-right: 40%;
+
+  .messageContainer {
+    background: #fff;
+  }
+
+  .date {
+    font-size: 0.8em;
+    color: #888;
+  }
+}
+
 // injector
 // endinjector
