@@ -17,7 +17,8 @@
       getResource: getResource,
       isLoggedIn: isLoggedIn,
       checkRoles: checkRoles,
-      checkAnyRoles: checkAnyRoles
+      checkAnyRoles: checkAnyRoles,
+      logout: logout
     };
 
     function getResource(){
@@ -30,6 +31,10 @@
            }
          }
        );
+    }
+
+    function logout(){
+      $cookies.remove('user');
     }
 
     function isLoggedIn(){
