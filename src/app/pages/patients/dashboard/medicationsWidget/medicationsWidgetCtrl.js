@@ -12,14 +12,14 @@
   function MedicationsWidgetCtrl($scope, Medication, colorHelper) {
       var vm = this;
       vm.patient = $scope.patient;
-      vm.data = undefined;
+      vm.medications = undefined;
 
       loadMedications();
 
 
       function loadMedications(){
         Medication.user({userId: vm.patient.id}, function(data){
-          vm.data = data;
+          vm.medications = data;
         });
       }
 

@@ -9,11 +9,17 @@
       .controller('CheckinsWidgetCtrl', CheckinsWidgetCtrl);
 
   /** @ngInject */
-  function CheckinsWidgetCtrl($scope, FitBitMeasurement, colorHelper) {
+  function CheckinsWidgetCtrl($scope, Checkin, colorHelper) {
       var vm = this;
       vm.patient = $scope.patient;
-      vm.data = undefined;
+      vm.checkins = undefined;
 
+      loadCheckIns();
 
+      function loadCheckIns(){
+        Checkin.answered({userId: vm.patient.id}, function(data){
+          vm.checkins = data;
+        });
+      }
   }
 })();

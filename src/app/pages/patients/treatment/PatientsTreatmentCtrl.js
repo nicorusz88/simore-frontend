@@ -229,9 +229,12 @@
       }
       vm.newRecommendationModal.close();
     }
-    
-    
-    
+
+    function uploadPicture() {
+      console.log("uploadPicture");
+      var fileInput = document.getElementById('uploadFile');
+      fileInput.click();
+    };
   }
 
 })();
