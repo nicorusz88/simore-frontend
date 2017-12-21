@@ -8,7 +8,7 @@
       .controller('PatientsMessagesCtrl', PatientsMessagesCtrl);
 
   /** @ngInject */
-  function PatientsMessagesCtrl($scope, $state, $stateParams, Auth, User, Message) {
+  function PatientsMessagesCtrl($rootScope, $scope, $state, $stateParams, Auth, User, Message) {
     var vm = this;
     vm.patient = undefined;
     vm.professional = Auth.isLoggedIn();
@@ -16,6 +16,7 @@
     vm.messages = undefined;
     vm.send = send;
     vm.loadMessages = loadMessages;
+    vm.interval = undefined;
 
     loadPatient();
  
@@ -25,6 +26,10 @@
       User.get( { userId: $stateParams.patientId}, function(user) {
         vm.patient = user;
         vm.loadMessages();
+
+        vm.interval = setInterval(function(){
+          loadMessages();
+        }, 4000);
       });
     }
 
@@ -36,7 +41,9 @@
             Message.setRead({user1Id: vm.messages[i].id}, function(data){});
           }
         }
-
+        setTimeout(function(){
+          $('#messages-list').animate({ scrollTop: $('#messages-list > div').height() }, 500);
+        }, 500);
       });
     }
 
@@ -46,6 +53,12 @@
         vm.loadMessages();
       });
     }
+
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options){
+      if (fromState.name == "patients.messages"){
+        clearInterval(vm.interval);
+      }
+    });
     
   }
 
