@@ -19,12 +19,30 @@
           'cmd': 'date'
         },
       },
+      'heartRateHistory': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'heart-rate',
+          'cmd': 'start-date',
+          'cmd2': 'end-date'
+        }
+      },
       'steps': { 
         method: 'GET',
         isArray: true,
         params: {
           'type' : 'steps',
           'cmd': 'date'
+        },
+      },
+      'stepsHistory': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'steps',
+          'cmd': 'start-date',
+          'cmd2': 'end-date'
         },
       },
       'weight': { 
@@ -35,12 +53,30 @@
           'cmd': 'date'
         },
       },
+      'weightHistory': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'weight',
+          'cmd': 'start-date',
+          'cmd2': 'end-date'
+        },
+      },
       'burntCalories': { 
         method: 'GET',
         isArray: true,
         params: {
           'type' : 'burnt-calories',
           'cmd': 'date'
+        },
+      },
+      'burntCaloriesHistory': { 
+        method: 'GET',
+        isArray: true,
+        params: {
+          'type' : 'burnt-calories',
+          'cmd': 'start-date',
+          'cmd2': 'end-date'
         },
       },
       'bloodPressure': { 
@@ -59,14 +95,14 @@
           'cmd': 'date'
         }
       },
-      'heartRateHistory': { 
+      'distanceHistory': { 
         method: 'GET',
         isArray: true,
         params: {
-          'type' : 'heart-rate',
+          'type' : 'distance',
           'cmd': 'start-date',
           'cmd2': 'end-date'
-        }
+        },
       }
     });
   }

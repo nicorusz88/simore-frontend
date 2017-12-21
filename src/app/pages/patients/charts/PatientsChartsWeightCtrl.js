@@ -8,37 +8,70 @@
       .controller('PatientsChartsWeightCtrl', PatientsChartsWeightCtrl);
 
   /** @ngInject */
-  function PatientsChartsWeightCtrl($scope, $state, $stateParams, User) {
+  function PatientsChartsWeightCtrl($scope, $state, $stateParams, User, FitBitMeasurement) {
     var vm = this;
     vm.entry = undefined;
 
     loadPatient();
 
-    vm.labels =["May", "Jun", "Jul", "Aug", "Sep"];
-    vm.data = [
-      [65, 59, 90, 81, 56],
-      [28, 48, 40, 19, 88]
-    ];
-    vm.series = ['Product A', 'Product B'];
+    vm.labels =[];
+    vm.data = [];
+    vm.series = ['Peso', 'BMI', 'Grasa'];
+    vm.loadData = loadData;
 
+    vm.dateFrom = new Date(moment().startOf('month').format());
+    vm.dateTo = new Date(moment().format());
 
-    $scope.changeData = function () {
-      vm.data[0] = shuffle(vm.data[0]);
-      vm.data[1] = shuffle(vm.data[1]);
+    vm.options = {
+      showWeeks: false
     };
+    vm.open = open;
+    vm.opened = false;
 
-    function shuffle(o){
-      for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x){}
-      return o;
-    }
+    vm.options2 = {
+      showWeeks: false
+    };
+    vm.open2 = open2;
+    vm.opened2 = false;
+    
 
- 
+
     ////////////////////
 
     function loadPatient(){
       User.get( { userId: $stateParams.patientId}, function(user) {
         vm.entry = user;
+
+        vm.loadData();
       });
+    }
+
+
+    function loadData(){
+      FitBitMeasurement.weightHistory({treatmentId: vm.entry.treatment.id, date: moment(vm.dateFrom).format('YYYY-MM-DD'), date2: moment(vm.dateTo).format('YYYY-MM-DD')}, function(data){
+        var weight = [];
+        var bmi = [];
+        var fat = [];
+        var labels = [];
+
+        for(var i = 0; i < data.length; i++){
+          weight[i] = data[i].weight;
+          bmi[i] = data[i].bmi;
+          fat[i] = data[i].fat;
+          labels[i] = moment(data[i].date).format('YYYY-MM-DD');
+        }
+
+        vm.labels = labels;
+        vm.data = [weight, bmi, fat];
+      });
+    }
+
+    function open() {
+      vm.opened = true;
+    }
+
+    function open2() {
+      vm.opened2 = true;
     }
     
   }
