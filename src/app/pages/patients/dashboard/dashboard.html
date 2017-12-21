@@ -4,30 +4,45 @@
         ba-panel-title="Ritmo Cardíaco"
        ba-panel-class="medium-panel" ng-if="vm.entry && vm.hasVital('HEART_RATE')">
     <heart-rate-widget patient="vm.entry" ng-if="vm.entry"></heart-rate-widget>
+    <p class="text-right">
+      <a href="#" class="btn btn-default btn-xs" ui-sref="patients.heartRate({patientId: vm.entry.id})">Ver historial</a>
+    </p>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Peso"
        ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('WEIGHT')">
     <weight-widget patient="vm.entry" ng-if="vm.entry"></weight-widget>
+    <p class="text-right">
+      <a href="#" class="btn btn-default btn-xs" ui-sref="patients.weight({patientId: vm.entry.id})">Ver historial</a>
+    </p>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Calorías quemadas"
        ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('BURNT_CALORIES')">
     <burnt-calories-widget patient="vm.entry" ng-if="vm.entry"></burnt-calories-widget>
+    <p class="text-right">
+      <a href="#" class="btn btn-default btn-xs" ui-sref="patients.burntCalories({patientId: vm.entry.id})">Ver historial</a>
+    </p>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Pasos"
        ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('STEPS')">
     <steps-widget patient="vm.entry" ng-if="vm.entry"></steps-widget>
+    <p class="text-right">
+      <a href="#" class="btn btn-default btn-xs" ui-sref="patients.steps({patientId: vm.entry.id})">Ver historial</a>
+    </p>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12"
        ba-panel
         ba-panel-title="Distancia"
        ba-panel-class="xsmall-panel" ng-if="vm.entry && vm.hasVital('DISTANCE')">
     <distance-widget patient="vm.entry" ng-if="vm.entry"></distance-widget>
+    <p class="text-right">
+      <a href="#" class="btn btn-default btn-xs" ui-sref="patients.distance({patientId: vm.entry.id})">Ver historial</a>
+    </p>
   </div>
 </div>
 <div class="row">

@@ -8,39 +8,77 @@
       .controller('PatientsChartsHeartRateCtrl', PatientsChartsHeartRateCtrl);
 
   /** @ngInject */
-  function PatientsChartsHeartRateCtrl($scope, $state, $stateParams, User) {
+  function PatientsChartsHeartRateCtrl($timeout, $scope, $state, $stateParams, User, FitBitMeasurement) {
     var vm = this;
     vm.entry = undefined;
 
     loadPatient();
 
-    vm.labels =["May", "Jun", "Jul", "Aug", "Sep"];
+    vm.labels =[];
     vm.data = [
-      [65, 59, 90, 81, 56],
-      [28, 48, 40, 19, 88]
+      [],
+      [],
+      [],
+      [],
+      []
     ];
-    vm.series = ['Product A', 'Product B'];
+    vm.series = ['Distancia [KM]'];
+    vm.loadData = loadData;
 
+    vm.dateFrom = new Date(moment().startOf('month').format());
+    vm.dateTo = new Date(moment().format());
 
-    $scope.changeData = function () {
-      vm.data[0] = shuffle(vm.data[0]);
-      vm.data[1] = shuffle(vm.data[1]);
+    vm.options = {
+      showWeeks: false
     };
+    vm.open = open;
+    vm.opened = false;
 
-    function shuffle(o){
-      for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x){}
-      return o;
-    }
+    vm.options2 = {
+      showWeeks: false
+    };
+    vm.open2 = open2;
+    vm.opened2 = false;
 
- 
+
     ////////////////////
 
     function loadPatient(){
       User.get( { userId: $stateParams.patientId}, function(user) {
         vm.entry = user;
+
+        vm.loadData();
       });
     }
-    
+
+
+    function loadData(){
+      FitBitMeasurement.heartRateHistory({treatmentId: vm.entry.treatment.id, date: moment(vm.dateFrom).format('YYYY-MM-DD'), date2: moment(vm.dateTo).format('YYYY-MM-DD')}, function(data){
+        var dataPerDay = [];
+        var labels = [];
+
+        for(var i = 0; i < data.length; i++){
+          var day = moment(data[i].date).format('YYYY-MM-DD');
+          if (! (day in labels)){
+            labels.push(day);
+          }
+          //labels[i] = moment(data[i].date).format('YYYY-MM-DD');
+        }
+
+        console.log(labels);
+
+        vm.labels = labels;
+      });
+    }
+
+    function open() {
+      vm.opened = true;
+    }
+
+    function open2() {
+      vm.opened2 = true;
+    }
+
   }
 
 })();

@@ -12,7 +12,7 @@
     'SimoreFrontend.pages.treatments',
     'SimoreFrontend.pages.patients',
     //'SimoreFrontend.pages.tables',
-    'SimoreFrontend.pages.charts',
+    //'SimoreFrontend.pages.charts',
     //'SimoreFrontend.pages.maps',
     //'SimoreFrontend.pages.profile',
   ]).config(routeConfig);

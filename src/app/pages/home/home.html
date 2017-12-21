@@ -8,7 +8,7 @@
         <p>{{patient.firstName }}, {{patient.lastName }}</p>
         <p><span class="label label-primary">{{ patient.treatment.treatmentTemplate.name }}</span></p>
         <p class="text-right">
-          <a href="#" class="btn btn-default btn-xs" ui-sref="patients.dashboard({patientId: patient.id})">Mensajes</a>
+          <a href="#" class="btn btn-default btn-xs" ui-sref="patients.messages({patientId: patient.id})">Mensajes</a>
           <a href="#" class="btn btn-default btn-xs" ui-sref="patients.dashboard({patientId: patient.id})">Ver más</a>
         </p>
       </div>

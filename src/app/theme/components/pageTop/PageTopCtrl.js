@@ -10,8 +10,13 @@
 
   /** @ngInject */
   function PageTopCtrl($scope, Auth) {
-
     $scope.hidePageTop = Auth.isLoggedIn();
-    
+    $scope.logout = logout;
+
+    function logout(){
+      Auth.logout();
+      window.location.href = "/";
+    }
+
   }
 })();
